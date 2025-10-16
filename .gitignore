@@ -1,0 +1,2 @@
+# Ignore Node.js dependencies and lockfiles
+node_modules/
