@@ -198,3 +198,38 @@ header {
 .portfolio {
   text-align: left;
 }
+
+.portfolio__header {
+  background-color: var(--gc1);
+  color: #fefefe;
+  padding: 2rem;
+  display: flex;
+  border: solid #000000;
+  border-width: 0.25rem 0 0.25rem 0;
+}
+
+.cooperation {
+  text-align: left;
+}
+
+.cooperation__header {
+  background-color: var(--gc1);
+  color: #fefefe;
+  padding: 2rem;
+  display: flex;
+  border: solid #000000;
+  border-width: 0.25rem 0 0.25rem 0;
+}
+
+.contact {
+  text-align: left;
+}
+
+.contact__header {
+  background-color: var(--gc1);
+  color: #fefefe;
+  padding: 2rem;
+  display: flex;
+  border: solid #000000;
+  border-width: 0.25rem 0 0.25rem 0;
+}
