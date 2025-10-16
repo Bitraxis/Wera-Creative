@@ -194,3 +194,7 @@ header {
   font-size: 2.5rem;
   margin: 0;
 }
+
+.portfolio {
+  text-align: left;
+}
