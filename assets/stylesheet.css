@@ -1,134 +1,196 @@
-@import url('basesheet.css');
-@import url('https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("basesheet.css");
+@import url("https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 header {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+/* Global color variables */
+:root {
+  --gc1: #fd6220;
+  --gc2: #ff7a50;
+  --gc3: #f00eea;
 }
 
 .header a {
-    text-decoration: none;
-    color: #fefefe;
+  text-decoration: none;
+  color: #fefefe;
 }
-
 .header {
-    color: #fefefe;
-    text-decoration: none;
-    /* Define CSS variables for easier color tuning */
-    --gc1: #fd6220; /* warm orange */
-    --gc2: #ff7a50; /* softer orange */
-    --gc3: #f00eea; /* magenta */
-    /* Solid-color fallback */
-    background-color: var(--gc1);
-    /* Smooth multi-stop gradient for fewer harsh transitions */
-    background-image: linear-gradient(90deg, var(--gc1) 0%, var(--gc2) 45%, var(--gc3) 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: solid #000000;
-    border-width: 0 0 0.25rem 0;
-    position: relative; /* for overlay pseudo-element */
-    overflow: visible;
+  color: #fefefe;
+  text-decoration: none;
+  background-color: var(--gc1);
+  background-image: linear-gradient(
+    90deg,
+    var(--gc1) 0%,
+    var(--gc2) 45%,
+    var(--gc3) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid #000;
+  border-width: 0 0 0.25rem 0;
+  position: relative;
+  overflow: visible;
 }
-
-/* subtle overlay to improve contrast on variable screens */
 .header::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.06), rgba(0,0,0,0.12));
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.06),
+    rgba(0, 0, 0, 0.12)
+  );
+  pointer-events: none;
 }
 
 .header h1 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    font-size: 3rem;
-    margin: 2.5rem 3.75rem 2.5rem 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  margin: 2.5rem 3.75rem 2.5rem 0;
 }
-
 
 /* The nav sits to the right of the H1; margin-left on nav gives the 3.75rem start gap */
 .header nav {
-    display: flex;
-    flex: 1 1 auto; /* take remaining space */
-    align-items: center;
-    margin-left: 3.75rem; /* start nav 3.75rem from the h1 */
-    justify-content: space-between; /* distribute items across the available width */
-    gap: 3.75rem; /* minimum gap between items */
+  display: flex;
+  flex: 1 1 auto; /* take remaining space */
+  align-items: center;
+  margin-left: 3.75rem; /* start nav 3.75rem from the h1 */
+  justify-content: space-between; /* distribute items across the available width */
+  gap: 3.75rem; /* minimum gap between items */
 }
 
 .header nav a {
-    font-size: 2.5rem; /* keep the font size you specified */
-    color: inherit;
-    text-decoration: none;
-    display: inline-block;
+  font-size: 2.5rem; /* keep the font size you specified */
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .header nav .nav__a4 {
-    margin-right: 2.5rem;
+  margin-right: 2.5rem;
 }
 
-
-
 .nav-toggle {
-    display: none; /* hidden checkbox */
+  display: none; /* hidden checkbox */
 }
 
 .nav-toggle-label {
-    display: none; /* shown only on small screens */
-    font-size: 2.5rem;
-    cursor: pointer;
-    user-select: none;
+  display: none; /* shown only on small screens */
+  font-size: 2.5rem;
+  cursor: pointer;
+  user-select: none;
 }
 
 @media (max-width: 800px) {
-    /* show hamburger */
-    .nav-toggle-label {
-        display: inline-block;
-        margin-left: auto;
-        color: inherit;
-    }
+  /* show hamburger */
+  .nav-toggle-label {
+    display: inline-block;
+    margin-left: auto;
+    color: inherit;
+  }
 
-    /* hide the nav by default on small screens */
-    .header nav {
-        display: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 100%; /* drop below the header */
-        background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.85));
-        padding: 1rem;
-        flex-direction: column;
-        gap: 1rem;
-        z-index: 50;
-    }
+  /* hide the nav by default on small screens */
+  .header nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%; /* drop below the header */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.85)
+    );
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 50;
+  }
 
-    /* when checkbox is checked, show the nav */
-    .nav-toggle:checked + .nav-toggle-label + nav,
-    .nav-toggle:checked ~ nav {
-        display: flex;
-    }
+  /* when checkbox is checked, show the nav */
+  .nav-toggle:checked + .nav-toggle-label + nav,
+  .nav-toggle:checked ~ nav {
+    display: flex;
+  }
 
-    .header nav a {
-        font-size: 2rem; /* slightly smaller on mobile */
-    }
+  .header nav a {
+    font-size: 2rem; /* slightly smaller on mobile */
+  }
 }
 
 /* Tablet layout: reduce gaps and font sizes slightly for widths between 801px and 1024px */
 @media (min-width: 801px) and (max-width: 1024px) {
-    .header h1 {
-        font-size: 2.5rem;
-        margin: 2rem 2.5rem 2rem 0;
-    }
+  .header h1 {
+    font-size: 2.5rem;
+    margin: 2rem 2.5rem 2rem 0;
+  }
 
-    .header nav {
-        margin-left: 2.5rem;
-        gap: 2rem;
-        justify-content: space-between;
-    }
+  .header nav {
+    margin-left: 2.5rem;
+    gap: 2rem;
+    justify-content: space-between;
+  }
 
-    .header nav a {
-        font-size: 2.25rem;
-    }
+  .header nav a {
+    font-size: 2.25rem;
+  }
+}
+
+/* First page hero */
+.firstpage {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center the logo horizontally and vertically */
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.firstpage__logo {
+  max-width: 60%;
+  height: auto;
+  margin: 0 auto;
+  z-index: 5;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .firstpage__logo {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 800px) {
+  .firstpage {
+    min-height: calc(100vh - 3.5rem);
+    padding-top: 3rem;
+  }
+
+  .firstpage__logo {
+    max-width: 90%;
+  }
+}
+
+/* About section */
+.about {
+  text-align: left;
+}
+.about__header {
+  background-color: var(--gc1);
+  color: #fefefe;
+  padding: 2rem;
+  display: flex;
+  border: solid #000000;
+  border-width: 0.25rem 0 0.25rem 0;
+}
+
+.about__header--h2 {
+  font-size: 2.5rem;
+  margin: 0;
 }
