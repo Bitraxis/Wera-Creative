@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +9,50 @@
     <link rel="stylesheet" href="assets/stylesheet.css">
     <script type="importmap">
         {
-        "imports": {
-            "@material/web/": "https://esm.run/@material/web/"
-        }
+            "imports": {
+                "@material/web/": "https://esm.run/@material/web/"
+            }
         }
     </script>
     <script type="module">
         import '@material/web/all.js';
         import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
-
         document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.13.2/brython.min.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.13.2/brython_stdlib.js">
+    </script>
+    
 </head>
-<body>
-    <h1>Placeholder</h1>
+<body onload="brython()">
+    <header class="header" id="header">
+        <h1 class="header__h1">WERA CREATIVE</h1>
+        <nav class="nav" id="nav">
+            <a href="index.html" class="nav__a1" id="nav__a1">Domov</a>
+            <a href="about.html" class="nav__a2" id="nav__a2">O mne</a>
+            <a href="shop.html" class="nav__a3" id="nav__a3">Obchod</a>
+            <a href="contact.html" class="nav__a4" id="nav__a4">Kontakt</a>
+        </nav>
+    </header>
+    <main class="main" id="main">
+        <section class="firstpage" id="firstpage">
+
+        </section>
+        <section class="about" id="about">
+
+        </section>
+        <section class="portfolio" id="portfolio">
+
+        </section>
+        <section class="cooperation" id="cooperation">
+
+        </section>
+        <section class="contact" id="contact">
+
+        </section>
+    </main>
 </body>
 </html>

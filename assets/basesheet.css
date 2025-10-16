@@ -1,6 +1,7 @@
 @import url('https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Some basic styling as per W3C standards mixed with some designer favorites */
 * {
     /* Brand colorscheme */
     --brand: hsl(18, 98%, 56%);
@@ -54,25 +55,46 @@
     font-style: normal;
 }
 
-:root {
-    color-scheme: light dark;
-    --surface-shadow-light: var(--brand-hue) 10% 20%;
-    --shadow-strength-light: .02;
-    --brand: var(--brand-light);
-    --text1: var(--text1-light);
-    --text2: var(--text2-light);
-    --surface1: var(--surface1-light);
-    --surface2: var(--surface2-light);
-    --surface3: var(--surface3-light);
-    --surface4: var(--surface4-light);
-    --surface-shadow: var(--surface-shadow-light);
-    --shadow-strength: var(--shadow-strength-light);
+@media (prefers-color-scheme: light) {
+    @import url('theme/light.css');
+    :root {
+        color-scheme: light;
+        --surface-shadow-light: var(--brand-hue) 10% 20%;
+        --shadow-strength-light: .02;
+        --brand: var(--brand-light);
+        --text1: var(--text1-light);
+        --text2: var(--text2-light);
+        --surface1: var(--surface1-light);
+        --surface2: var(--surface2-light);
+        --surface3: var(--surface3-light);
+        --surface4: var(--surface4-light);
+        --surface-shadow: var(--surface-shadow-light);
+        --shadow-strength: var(--shadow-strength-light);
+    }
+    @media (prefers-contrast: more) {
+        @import url('theme/light-hc.css');
+        :root {
+        color-scheme: light;
+        --surface-shadow-light: var(--brand-hue) 10% 20%;
+        --shadow-strength-light: .02;
+        --brand: var(--brand-light);
+        --text1: var(--text1-light);
+        --text2: var(--text2-light);
+        --surface1: var(--surface1-light);
+        --surface2: var(--surface2-light);
+        --surface3: var(--surface3-light);
+        --surface4: var(--surface4-light);
+        --surface-shadow: var(--surface-shadow-light);
+        --shadow-strength: var(--shadow-strength-light);
+        }   
+    }
 }
+
 
 @media (prefers-color-scheme: dark) {
     :root {
+        @import url('theme/dark.css');
         color-scheme: dark;
-
         --brand: var(--brand-dark);
         --text1: var(--text1-dark);
         --text2: var(--text2-dark);
@@ -82,6 +104,21 @@
         --surface4: var(--surface4-dark);
         --surface-shadow: var(--surface-shadow-dark);
         --shadow-strength: var(--shadow-strength-dark);
+    }
+    @media (prefers-contrast: more) {
+        @import url('theme/dark-hc.css');
+        :root {
+            color-scheme: dark;
+            --brand: var(--brand-dark);
+            --text1: var(--text1-dark);
+            --text2: var(--text2-dark);
+            --surface1: var(--surface1-dark);
+            --surface2: var(--surface2-dark);
+            --surface3: var(--surface3-dark);
+            --surface4: var(--surface4-dark);
+            --surface-shadow: var(--surface-shadow-dark);
+            --shadow-strength: var(--shadow-strength-dark);
+        }   
     }
 }
 
