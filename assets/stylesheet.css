@@ -2,234 +2,169 @@
 @import url("https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-header {
-  display: flex;
-  align-items: center;
+:root{
+  --gc1:#fd6220; /* brand accent */
+  --gc2:#ff7a50;
+  --gc3:#f00eea;
+  --header-gradient: linear-gradient(90deg,var(--gc1),var(--gc3));
+  --bg: var(--surface2);
+  --txt: var(--text1);
+  --muted: rgba(15,15,16,0.08);
 }
 
-/* Global color variables */
-:root {
-  --gc1: #fd6220;
-  --gc2: #ff7a50;
-  --gc3: #f00eea;
+/* Base */
+/* Use flex layout so footer can sit at the bottom when content is short */
+html,body{height:100%}
+body{font-family:var(--font-family, 'Raleway',sans-serif);background:var(--bg);color:var(--txt);line-height:1.6;margin:0;padding:0;min-height:100vh;display:flex;flex-direction:column}
+/* allow main content to grow to push footer down (keeps behaviour safe if .main exists) */
+.main{flex:1}
+
+/* Header */
+.header{background-image:var(--header-gradient);color:#fff;padding:6px 1rem;display:flex;align-items:center;gap:1rem;border-bottom:2px solid #000}
+.header__h1{font-size:clamp(.95rem,1.6vw,1.15rem);margin:0;font-weight:700;letter-spacing:.8px}
+.nav{display:flex;align-items:center;margin-left:auto}
+.nav a{color:inherit;text-decoration:none;margin:0 .45rem;font-size:.95rem}
+.nav-toggle{position:absolute;left:-9999px}
+.nav-toggle-label{display:none;font-size:1rem;line-height:1}
+
+/* Hero visuals */
+.firstpage{position:relative;padding:1.75rem 0 2rem 0;min-height:420px}
+.firstpage__logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:clamp(150px,15vw,350px);max-width:350px;z-index:2}
+.firstpage__placeholder{position:absolute;right:6%;top:50%;transform:translateY(-50%);width:clamp(160px,20vw,350px);max-width:350px;opacity:.98;z-index:2}
+
+/* Hide the placeholder illustration (per request) */
+.firstpage__placeholder{display:none !important;visibility:hidden}
+
+/* Quote block under the logo */
+.quote{position:absolute;left:50%;top:calc(50% + clamp(90px,10vw,160px));transform:translateX(-50%);z-index:3;max-width:760px;padding:0 1rem;text-align:center;cursor:pointer}
+.quote__text{font-weight:800;font-size:clamp(1.05rem,2.6vw,1.4rem);line-height:1.15;color:var(--txt);letter-spacing:0.2px}
+.quote__author{font-size:clamp(.88rem,1.6vw,.98rem);font-weight:600;opacity:.92;margin-top:.36rem;color:var(--text2);letter-spacing:0.1px}
+.quote:focus{outline:2px solid color-mix(in srgb, var(--gc1) 60%, white);border-radius:6px}
+
+/* Fade animation for quote text/author */
+.quote__text,
+.quote__author{
+  transition:opacity .28s ease, transform .28s ease;
+  will-change: opacity, transform;
+}
+.quote.fade-out .quote__text,
+.quote.fade-out .quote__author{
+  opacity:0;
+  transform:translateY(-6px);
 }
 
-.header a {
-  text-decoration: none;
-  color: #fefefe;
-}
-.header {
-  color: #fefefe;
-  text-decoration: none;
-  background-color: var(--gc1);
-  background-image: linear-gradient(
-    90deg,
-    var(--gc1) 0%,
-    var(--gc2) 45%,
-    var(--gc3) 100%
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: solid #000;
-  border-width: 0 0 0.25rem 0;
-  position: relative;
-  overflow: visible;
-}
-.header::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.06),
-    rgba(0, 0, 0, 0.12)
-  );
-  pointer-events: none;
-}
 
-.header h1 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 3rem;
-  margin: 2.5rem 3.75rem 2.5rem 0;
-}
+/* Decorative SVGs */
+.decor{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:visible}
+.ellipse{position:absolute;pointer-events:none;display:block}
+.ellipse--left{left:-22%;top:6%;width:60%;max-width:920px;opacity:1}
+.ellipse--left-inner{left:-10%;top:34%;width:38%;max-width:520px;opacity:.28}
+.ellipse--top-right{right:-6%;top:-6%;width:28%;max-width:520px;opacity:.28;transform:rotate(-6deg)}
 
-/* The nav sits to the right of the H1; margin-left on nav gives the 3.75rem start gap */
-.header nav {
-  display: flex;
-  flex: 1 1 auto; /* take remaining space */
-  align-items: center;
-  margin-left: 3.75rem; /* start nav 3.75rem from the h1 */
-  justify-content: space-between; /* distribute items across the available width */
-  gap: 3.75rem; /* minimum gap between items */
-}
+/* Sections using header gradient */
+/* Section header bands (smaller, subtler borders) */
+.about__header,.portfolio__header,.cooperation__header,.contact__header{display:flex;justify-content:center;align-items:center;width:100%;box-sizing:border-box;background-image:var(--header-gradient);color:#fff;padding:.35rem .75rem;border-top:2px solid #000;border-bottom:2px solid #000;margin:0 0 .6rem 0}
+.about__header{border-top-width:2px;border-bottom-width:2px}
+.portfolio__header{padding:.35rem 6rem}
+.footer{padding:.45rem 1rem;margin:0;border-bottom:none;border-top:2px solid #000;background-image:var(--header-gradient);color:#fff;display:flex;align-items:center;justify-content:center}
 
-.header nav a {
-  font-size: 2.5rem; /* keep the font size you specified */
-  color: inherit;
-  text-decoration: none;
-  display: inline-block;
+/* smaller typographic presence for the section headings */
+.about__header h2,.portfolio__header h2,.cooperation__header h2,.contact__header h2{margin:0;font-size:clamp(.95rem,1.4vw,1.05rem);letter-spacing:.4px;font-weight:700}
+.footer p{margin:0;font-size:.95rem;text-align:center}
+.about__h3{text-align:center;font-size:1.35rem;font-weight:700;margin:0 0 .6rem 0;color:var(--txt);letter-spacing:.4px;text-decoration: underline;}
+/* Portfolio utilities */
+.portfolio__meta{text-align:center;margin:.6rem 0}
+.portfolio__title{letter-spacing:1.6px;font-weight:800;margin:0}
+.portfolio__subtitle{color:var(--text2);margin-top:.35rem;font-weight:600}
+.portfolio__intro{max-width:860px;margin:.6rem auto 1rem;color:var(--text2)}
+
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;max-width:1100px;margin:.5rem auto 1.25rem auto;padding:0 1rem}
+.card{min-height:120px;border:2px dashed var(--muted);border-radius:8px;background:var(--surface2);padding:1rem;display:flex;align-items:center;justify-content:center;text-align:center;box-sizing:border-box}
+
+/* Make cooperation cards slightly longer for better visual weight */
+.cooperation .cards-grid .card{min-height:160px;padding:1.15rem}
+.card__content h4{
+  margin:0 0 .4rem 0;
+  font-size:1.12rem;
+  font-weight:700;
+  color:var(--gc2);
+  letter-spacing:0.2px;
+}
+.card__content p{margin:0;color:var(--text2);font-size:.95rem}
+
+/* About values: force 2x2 layout with equal-height, evenly spaced card contents */
+.about__values{max-width:920px;margin:.75rem auto 1.25rem auto;grid-template-columns:repeat(2,minmax(220px,1fr));gap:1rem;padding:0 1rem}
+.about__values .card{min-height:160px;padding:1rem;display:flex;align-items:stretch}
+.about__values .card__content{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;text-align:left}
+.about__values .card__content h4{
+  font-size:1.14rem;
+  margin-bottom:.6rem;
+  font-weight:700;
+  color:var(--gc2);
 }
 
-.header nav .nav__a4 {
-  margin-right: 2.5rem;
+@media (max-width:720px){
+  .about__values{grid-template-columns:1fr}
+  .about__values .card__content{align-items:center;text-align:center}
 }
 
-.nav-toggle {
-  display: none; /* hidden checkbox */
+.cooperation__cta{display:block;width:calc(100% - 2rem);margin:.4rem auto .6rem auto;padding:.45rem .75rem;background:var(--gc1);color:#fff;border-radius:6px;text-align:center;font-weight:700}
+.filters{display:flex;gap:.5rem;justify-content:center;margin:.6rem 0}
+.filter{background:transparent;border:1px solid rgba(15,15,16,0.06);padding:.35rem .6rem;border-radius:18px}
+.filter.active{background:var(--gc1);color:#fff;border-color:var(--gc1)}
+
+/* small button inside cards that scrolls to contact */
+.card__contact-btn{margin-top:.5rem;padding:.4rem .65rem;background:var(--gc1);color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600}
+.card__contact-btn:focus{outline:2px solid color-mix(in srgb, var(--gc1) 60%, white)}
+
+/* Contact cards styling tweaks */
+.contact-cards .card{min-height:116px;padding:1rem;border-radius:10px}
+.contact-cards .card__content{display:flex;flex-direction:column;align-items:center;gap:.3rem}
+
+/* Emphasize the phone card (second child) — subtle, less bright */
+.contact-cards .card:nth-child(2){background:rgba(253,98,32,0.10);color:var(--txt);border:1px solid rgba(253,98,32,0.14);box-shadow:0 6px 12px rgba(0,0,0,0.06)}
+.contact-cards .card:nth-child(2) a{color:var(--gc1);font-weight:700;font-size:1.05rem;text-decoration:none}
+.contact-cards .card:nth-child(2) .card__content::before{content:"📞";font-size:1.6rem;display:block;margin-bottom:.25rem;color:var(--gc1)}
+
+/* Add icons for email and hours cards */
+.contact-cards .card:nth-child(1) .card__content::before{content:"📧";font-size:1.4rem;display:block;margin-bottom:.25rem;color:var(--gc3)}
+.contact-cards .card:nth-child(3) .card__content::before{content:"⏰";font-size:1.4rem;display:block;margin-bottom:.25rem;color:var(--gc2)}
+
+/* Subtle colorful tints for email and hours cards (less bright than phone) */
+.contact-cards .card:nth-child(1){background:rgba(240,14,234,0.06);color:var(--txt);border:1px solid rgba(240,14,234,0.10);box-shadow:0 4px 10px rgba(0,0,0,0.04)}
+.contact-cards .card:nth-child(1) a{color:var(--gc3);font-weight:700;text-decoration:none}
+
+.contact-cards .card:nth-child(3){background:rgba(255,122,80,0.06);color:var(--txt);border:1px solid rgba(255,122,80,0.08);box-shadow:0 4px 8px rgba(0,0,0,0.03)}
+.contact-cards .card:nth-child(3) a{color:var(--gc2);font-weight:600;text-decoration:none}
+
+/* Style mail link to stand out slightly */
+.contact-cards a[href^="mailto:"]{color:var(--gc1);font-weight:600;text-decoration:none}
+
+/* Reduce visual noise for contact-cards on small screens */
+@media (max-width:560px){
+  .contact-cards .card{min-height:auto;padding:.8rem}
+  .contact-cards .card:nth-child(2) .card__content::before{font-size:1.4rem}
+  /* keep cooperation cards comfortable on small screens */
+  .cooperation .cards-grid .card{min-height:auto;padding:.9rem}
 }
 
-.nav-toggle-label {
-  display: none; /* shown only on small screens */
-  font-size: 2.5rem;
-  cursor: pointer;
-  user-select: none;
+.contact__form{max-width:760px;margin:.6rem auto 2rem auto;padding:0 1rem}
+.contact__form .form-row{display:flex;flex-direction:column;margin-bottom:.75rem}
+.contact__form label{font-size:.9rem;margin-bottom:.25rem;color:var(--text2)}
+.contact__form input,.contact__form textarea{padding:.5rem;border:1px solid rgba(15,15,16,0.08);border-radius:6px;font:inherit}
+.contact__form .btn{background:var(--gc1);color:#fff;padding:.6rem 1rem;border-radius:8px;border:none;cursor:pointer}
+
+@media (max-width:720px){
+  .portfolio__subtitle{font-size:.95rem}
+  .cards-grid{gap:.6rem}
+  #nav-toggle{position:absolute;left:-9999px}
+  .nav-toggle-label{display:block;margin-left:auto;padding:.25rem .6rem;background:rgba(255,255,255,.06);color:#fff;border-radius:6px;cursor:pointer}
+  .nav{display:none}
+  #nav-toggle:checked ~ .nav{display:flex;position:absolute;top:calc(100% + 6px);left:0;right:0;background-image:var(--header-gradient);color:#fff;flex-direction:column;gap:0;padding:.75rem 1rem;z-index:50;border-bottom:2px solid var(--txt)}
+  .nav a{display:block;padding:.6rem .25rem;color:inherit}
 }
 
-@media (max-width: 800px) {
-  /* show hamburger */
-  .nav-toggle-label {
-    display: inline-block;
-    margin-left: auto;
-    color: inherit;
-  }
 
-  /* hide the nav by default on small screens */
-  .header nav {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%; /* drop below the header */
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.85),
-      rgba(0, 0, 0, 0.85)
-    );
-    padding: 1rem;
-    flex-direction: column;
-    gap: 1rem;
-    z-index: 50;
-  }
 
-  /* when checkbox is checked, show the nav */
-  .nav-toggle:checked + .nav-toggle-label + nav,
-  .nav-toggle:checked ~ nav {
-    display: flex;
-  }
 
-  .header nav a {
-    font-size: 2rem; /* slightly smaller on mobile */
-  }
-}
 
-/* Tablet layout: reduce gaps and font sizes slightly for widths between 801px and 1024px */
-@media (min-width: 801px) and (max-width: 1024px) {
-  .header h1 {
-    font-size: 2.5rem;
-    margin: 2rem 2.5rem 2rem 0;
-  }
-
-  .header nav {
-    margin-left: 2.5rem;
-    gap: 2rem;
-    justify-content: space-between;
-  }
-
-  .header nav a {
-    font-size: 2.25rem;
-  }
-}
-
-/* First page hero */
-.firstpage {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* center the logo horizontally and vertically */
-  background: #ffffff;
-  overflow: hidden;
-}
-
-.firstpage__logo {
-  max-width: 60%;
-  height: auto;
-  margin: 0 auto;
-  z-index: 5;
-  display: block;
-}
-
-@media (max-width: 1024px) {
-  .firstpage__logo {
-    max-width: 75%;
-  }
-}
-
-@media (max-width: 800px) {
-  .firstpage {
-    min-height: calc(100vh - 3.5rem);
-    padding-top: 3rem;
-  }
-
-  .firstpage__logo {
-    max-width: 90%;
-  }
-}
-
-/* About section */
-.about {
-  text-align: left;
-}
-.about__header {
-  background-color: var(--gc1);
-  color: #fefefe;
-  padding: 2rem;
-  display: flex;
-  border: solid #000000;
-  border-width: 0.25rem 0 0.25rem 0;
-}
-
-.about__header--h2 {
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-.portfolio {
-  text-align: left;
-}
-
-.portfolio__header {
-  background-color: var(--gc1);
-  color: #fefefe;
-  padding: 2rem;
-  display: flex;
-  border: solid #000000;
-  border-width: 0.25rem 0 0.25rem 0;
-}
-
-.cooperation {
-  text-align: left;
-}
-
-.cooperation__header {
-  background-color: var(--gc1);
-  color: #fefefe;
-  padding: 2rem;
-  display: flex;
-  border: solid #000000;
-  border-width: 0.25rem 0 0.25rem 0;
-}
-
-.contact {
-  text-align: left;
-}
-
-.contact__header {
-  background-color: var(--gc1);
-  color: #fefefe;
-  padding: 2rem;
-  display: flex;
-  border: solid #000000;
-  border-width: 0.25rem 0 0.25rem 0;
-}

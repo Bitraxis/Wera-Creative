@@ -35,29 +35,67 @@
       <label for="nav-toggle" class="nav-toggle-label">☰</label>
       <nav class="nav">
         <a href="index.html" class="nav__a1" id="nav__a1">Domov</a>
-        <a href="about.html" class="nav__a2" id="nav__a2">O mne</a>
-        <a href="shop.html" class="nav__a3" id="nav__a3">Obchod</a>
-        <a href="contact.html" class="nav__a4" id="nav__a4">Kontakt</a>
+        <a href="/shop/shop.html" class="nav__a3" id="nav__a3">Obchod</a>
+        <a href="#contact" class="nav__a4" id="nav__a4">Kontakt</a>
       </nav>
     </header>
     <main class="main" id="main">
       <section class="firstpage" id="firstpage">
+        <!-- Decorative background ellipses positioned inside this section -->
         <img
           src="./assets/materials/logo.svg"
           alt="Wera Creative Logo"
           class="firstpage__logo"
+        />
+          <!-- Rotating quote: toggles between two texts on hover/click (persists until toggled again) -->
+          <div class="quote" id="hero-quote" tabindex="0" aria-live="polite">
+            <div class="quote__text">To som v živote nerobila, to mi určite pôjde!</div>
+            <div class="quote__author">Neznámy autor</div>
+          </div>
+        <img
+          src="./assets/materials/placeholder.svg"
+          alt="Placeholder Image"
+          class="firstpage__placeholder"
         />
       </section>
       <section class="about" id="about">
         <header class="about__header" id="about__header">
           <h2 class="about__header--h2" id="about__header--h2">O mne</h2>
         </header>
-        <p class="about__p" id="about__p">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
-          voluptatum obcaecati sunt corporis nisi perferendis, repellendus eius
-          earum fugiat cum rem quae libero nesciunt delectus deleniti sint,
-          explicabo quibusdam magnam.
-        </p>
+        <h3 class="about__h3">Môj príbeh</h3>
+        <p>Vyštudovala som podvojné účtovníctvo a manažment, mnoho rokov po skončení školy som žila a pracovala v zahraničí a popritom spoznávala rôzne kultúry. Tieto životné cesty ma naučili mnohému ako absolútnej samostatnosti, prispôsobivosti. Žiadny kurz Vás nenaučí niečo podobné. <strong> hovorím nemeckým jazykom a celkom dobre anglicky.</strong></p>
+        <p>Po rokoch práce v zahraničí som sa usadila v rodnom kraji na Slovensku a založila si rodinu, ktorá je pre mňa prioritou. Naďalej som naberala <strong>dlhoročné odborné skúsenosti asistentky</strong> vrcholového manažmentu, neskôr <strong>špecialistky podpory zákazníkov</strong> v oblastiach služieb, obchodu, IT technológií alebo aj <strong>personálneho manažmentu.</strong></p>
+        <p>Ešte pred niekoľkými mesiacmi bolo ťažké predstaviť si plnohodnotne a efektívne pracovať z domu, na diaľku. Schopnosť adaptovať sa v dnešnej dobe je veľmi kľúčová pokiaľ chcete vyťažiť to najlepšie z každej zmeny. Mňa úplne pohltila myšlienka pomáhať zákazníkom touto formou. Obom stranám takto dokážem ušetriť čas, energiu a aj peniaze. Vďaka <strong>vysokej flexibilite</strong> a <strong>nízkej réžii</strong> je virtuálna asistentka efektívnym personálnym riešením pre podnikateľov rôznych veľkostí.</p>
+        <p>Prepájam moje dlhoročne nadobúdané profesionálne zručnosti v korporátnom svete a súkromnom sektore. Avšak ani po viac ako 12 rokoch profesionálneho rastu sa neprestávam vzdelávať a nadobúdať nové zručnosti a schopnosti, z ktorých profitujú ďalej moji klienti.</p>
+        <h3 class="about__h3">Moja vízia a hodnoty</h3>
+        <!-- Values cards -->
+        <div class="cards-grid about__values">
+          <div class="card">
+            <div class="card__content">
+              <h4>Profesionálnosť</h4>
+              <p>Definícia tohto slova hovorí o človeku, ktorý dosiahol vysoký stupeň majstrovstva vo svojej tvorbe. A na to potrebujete roky praxe, skúseností a často aj pomyselných faciek. Pokiaľ začínate s podnikaním je rozumným riešením spoľahnúť sa na profesionála vo svojom obore. Je náročné prosperovať v chaose. No byť proaktívna, mať zvládnutý time management a myslieť čo najviac dopredu, to sú kroky, ktoré mi umožnia mať veci pod kontrolou.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__content">
+              <h4>Dôvera</h4>
+              <p>Skúsenosti ukazujú, že dôvera sa musí pestovať. Nikoho k nej nemožno nútiť alebo ju urýchľovať. Je to proces dozrievania, ktorý vedie zainteresované strany k hmatateľným prínosom. Nemecký priemyselník a vynálezca Robert Bosch to vedel, keď povedal: „Radšej by som prišiel o peniaze ako o dôveru.“ Ale ako vzniká dôvera? Pozitívna skúsenosť z minulosti je jeden faktor. Ďalším je komunikácia - dôvera musí byť nielen vnímaná, ale tiež aktívne komunikovaná. To si vyžaduje autentickosť, zodpovednosť, empatiu, pokoru a čestnosť.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__content">
+              <h4>Spoľahlivosť</h4>
+              <p>Spoľahlivosť ide ruka v ruke s vybudovanou dôverou. Ako sa dá preukázať spoľahlivosť? Dodržiavaním termínov, plnením úloh, ktoré boli dohodnuté. Pohotovosťou pri hľadaní riešení.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__content">
+              <h4>Lojalita</h4>
+              <p>Lojálnosť a zodpovednosť sú vlastnosti, ktoré sú skutočnou výhrou pre každý biznis. Takýto človek napríklad koná v súlade s hodnotami a pravidlami firmy a nevzdáva sa ani pri prvých náznakoch problémov.</p>
+            </div>
+          </div>
+        </div>
+        
       </section>
       <section class="portfolio" id="portfolio">
         <header class="portfolio__header" id="portfolio__header">
@@ -65,12 +103,19 @@
             Portfólio
           </h2>
         </header>
-        <p>
+        <!-- Portfolio meta (title, subtitle) -->
+        <div class="portfolio__meta">
+          <h3 class="portfolio__title">PORTFÓLIO</h3>
+          <div class="portfolio__subtitle">Veronika Žabojníková</div>
+        </div>
+
+        <!-- Short description / intro -->
+        <p class="portfolio__intro">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error a
           obcaecati ducimus laboriosam accusamus sed asperiores officiis natus
-          minima velit, dolores architecto laborum saepe. Laborum nihil
-          temporibus ratione repellat tenetur?
+          minima velit, dolores architecto laborum saepe.
         </p>
+
       </section>
       <section class="cooperation" id="cooperation">
         <header class="cooperation__header" id="cooperation__header">
@@ -84,17 +129,130 @@
           facilis dolores vero. Nobis non adipisci nam minima. Officia
           reiciendis doloribus amet!
         </p>
+
+        <!-- simple filter controls above cards: act as a language switch -->
+        <div class="filters" role="tablist" aria-label="Jazyk">
+          <button class="filter active" data-lang="sk" aria-pressed="true" type="button">Slovenčina</button>
+          <button class="filter" data-lang="de" aria-pressed="false" type="button">Nemčina</button>
+        </div>
+
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card__content card__sk">
+              <h4>Hodinová sadzba</h4>
+              <p>Jednorázový výkon</p>
+              <p>Občasná spolupráca</p>
+              <p>16€</p>
+              <button class="card__contact-btn" type="button" aria-label="Kontaktovať">Záujem</button>
+            </div>
+            <div class="card__content card__de" hidden>
+              <h4>Hodinová sadzba</h4>
+              <p>Jednorázový výkon</p>
+              <p>Občasná spolupráca</p>
+              <p>20€</p>
+              <button class="card__contact-btn" type="button" aria-label="Kontaktieren">Záujem</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__content card__sk">
+              <h4>Mini balík</h4>
+              <p>10 hodín práce rozložených v mesiaci</p>
+              <p>15€ / hodina</p>
+              <p>150€</p>
+              <button class="card__contact-btn" type="button" aria-label="Kontaktovať">Záujem</button>
+            </div>
+            <div class="card__content card__de" hidden>
+              <h4>Mini balík</h4>
+              <p>10 hodín práce rozložených v mesiaci</p>
+              <p>19€ / hodina</p>
+              <p>190€</p>
+              <button class="card__contact-btn" type="button" aria-label="Kontaktieren">Záujem</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__content card__sk">
+              <h4>Maxi balík</h4>
+              <p>20 hodín práce rozložených v mesiaci</p>
+              <p>14€ / hodina</p>
+              <p>280€</p>
+              <button class="card__contact-btn" type="button" aria-label="Kontaktovať">Záujem</button>
+            </div>
+            <div class="card__content card__de" hidden>
+              <h4>Maxi balík</h4>
+              <p>20 hodín práce rozložených v mesiaci</p>
+              <p>18€ / hodina</p>
+              <p>360€</p>
+              <button class="card__contact-btn" type="button" aria-label="Kontaktieren">Záujem</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__content card__sk">
+              <h4>Maxi PLUS balík</h4>
+              <p>30 hodín práce rozložených v mesiaci</p>
+              <p>13€ / hodina</p>
+              <p>390€</p>
+              <button class="card__contact-btn" type="button" aria-label="Kontaktovať">Záujem</button>
+            </div>
+            <div class="card__content card__de" hidden>
+              <h4>Maxi PLUS balík</h4>
+              <p>30 hodín práce rozložených v mesiaci</p>
+              <p>17€ / hodina</p>
+              <p>510€</p>
+              <button class="card__contact-btn" type="button" aria-label="Kontaktieren">Záujem</button>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="contact" id="contact">
         <header class="contact__header" id="contact__header">
           <h2 class="contact__header--h2" id="contact__header--h2">Kontakt</h2>
         </header>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi harum
-          esse aperiam dolore officia ullam, neque magni cupiditate numquam quis
-          provident a consequatur consectetur quas veniam repudiandae soluta,
-          nam asperiores.
-        </p>
+        <!-- Contact cards: email, phone, opening hours -->
+        <div class="cards-grid contact-cards">
+          <div class="card">
+            <div class="card__content">
+              <h4>Email</h4>
+              <p><a href="mailto:info@asistentwera.sk">info@asistentwera.sk</a></p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__content">
+              <h4>Telefón</h4>
+              <p><a href="tel:+421901234567">+421 90 123 4567</a></p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__content">
+              <h4>K dispozícii</h4>
+              <p>Pondelok - Piatok: 9:00 — 16:00</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact form (simple layout) -->
+        <form class="contact__form" action="#" method="post" novalidate>
+          <div class="form-row">
+            <label for="name">Meno</label>
+            <input id="name" name="name" type="text" />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" />
+          </div>
+          <div class="form-row">
+            <label for="phone">Telefón</label>
+            <input id="phone" name="phone" type="tel" />
+          </div>
+          <div class="form-row">
+            <label for="message">Správa</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+          </div>
+          <div class="form-row">
+            <button type="submit" class="btn">Odoslať</button>
+          </div>
+        </form>
       </section>
     </main>
     <footer class="footer" id="footer">
@@ -102,5 +260,128 @@
         © 2025 Wera Creative. Všetky práva vyhradené.
       </p>  
     </footer>
+    <!-- Inline script: toggle language buttons and swap card content -->
+    <script>
+      (function(){
+        function initLangSwitch(){
+          const buttons = Array.from(document.querySelectorAll('.filters .filter'));
+          const cards = Array.from(document.querySelectorAll('.cards-grid .card'));
+
+          function setLang(lang){
+            buttons.forEach(btn => {
+              const isActive = btn.dataset.lang === lang;
+              btn.classList.toggle('active', isActive);
+              btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            });
+            cards.forEach(card => {
+              const sk = card.querySelector('.card__sk');
+              const de = card.querySelector('.card__de');
+              if(sk) sk.hidden = (lang !== 'sk');
+              if(de) de.hidden = (lang !== 'de');
+            });
+          }
+
+          if(buttons.length === 0) return;
+
+          buttons.forEach(btn => {
+            btn.addEventListener('click', () => setLang(btn.dataset.lang));
+            btn.addEventListener('keydown', (e) => {
+              if(e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                setLang(btn.dataset.lang);
+              }
+            });
+          });
+
+          // initialise: prefer an already-marked active button, otherwise default to 'sk'
+          const activeBtn = buttons.find(b => b.classList.contains('active'));
+          setLang(activeBtn ? activeBtn.dataset.lang : 'sk');
+        }
+
+        if(document.readyState === 'loading'){
+          document.addEventListener('DOMContentLoaded', initLangSwitch);
+        } else {
+          initLangSwitch();
+        }
+      })();
+    </script>
+    <!-- Brython: smooth scroll handlers for header contact and card buttons -->
+    <script type="text/python">
+  from browser import document, window
+
+  def scroll_to_contact(ev=None):
+    contact = document.getElementById('contact')
+    if contact:
+      contact.scrollIntoView({'behavior':'smooth'})
+
+  # header contact link should scroll instead of navigating away
+  nav_contact = document.getElementById('nav__a4')
+  if nav_contact:
+    def nav_click(ev):
+      ev.preventDefault()
+      scroll_to_contact(ev)
+    nav_contact.bind('click', nav_click)
+
+  # attach to card buttons
+  for btn in document.select('.card__contact-btn'):
+    def make_handler(b):
+      def _handler(ev):
+        ev.preventDefault()
+        scroll_to_contact(ev)
+      return _handler
+    btn.bind('click', make_handler(btn))
+
+  # Quote toggling: hover or click toggles between two quotes and persists until toggled again
+  quotes = [
+    {"text": "To som v živote nerobila, to mi určite pôjde!", "author": "Neznámy autor"},
+    {"text": "Som presvedčená, že každý svojím konaním ovplyvňuje svoje smerovanie, svoju budúcnosť.", "author": "Neznámy autor"}
+  ]
+
+  quote_el = document.getElementById('hero-quote')
+  quote_text = quote_el.select_one('.quote__text') if quote_el else None
+  quote_author = quote_el.select_one('.quote__author') if quote_el else None
+
+  current_idx = 0
+  def update_quote(idx):
+    global current_idx
+    current_idx = idx
+    if quote_text:
+      quote_text.text = quotes[idx]['text']
+    if quote_author:
+      quote_author.text = quotes[idx]['author']
+
+  def toggle_quote(ev=None):
+    # crossfade: add fade-out, update after timeout, then fade back in
+    if not quote_el:
+      return
+    # prevent re-entrancy
+    if 'fade-out' in quote_el.classList:
+      return
+    new_idx = 1 - current_idx
+    # start fade-out
+    quote_el.classList.add('fade-out')
+
+    def finish():
+      update_quote(new_idx)
+      quote_el.classList.remove('fade-out')
+
+    # wait for CSS fade-out to complete (~280ms), then swap and fade-in
+    window.setTimeout(finish, 300)
+
+  if quote_el:
+    # bind mouseenter and click so desktop hover or touch/click toggles
+    quote_el.bind('mouseenter', toggle_quote)
+    quote_el.bind('click', toggle_quote)
+
+    # keyboard support: Enter or Space toggles when focused
+    def key_handler(ev):
+      if ev.key in ('Enter', ' '):
+        ev.preventDefault()
+        toggle_quote(ev)
+    quote_el.bind('keydown', key_handler)
+
+    # ensure initial content
+    update_quote(current_idx)
+    </script>
   </body>
 </html>
