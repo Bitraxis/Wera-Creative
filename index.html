@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wera Creative</title>
-    <link rel="stylesheet" href="assets/normalize.css" />
-    <link rel="stylesheet" href="assets/basesheet.css" />
-    <link rel="stylesheet" href="assets/stylesheet.css" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/basesheet.css" />
+    <link rel="stylesheet" href="assets/css/stylesheet.css" />
     <script type="importmap">
       {
         "imports": {
@@ -23,6 +23,7 @@
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.13.2/brython_stdlib.js">
     </script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body onload="brython()">
     <header class="header" id="header">
@@ -31,7 +32,7 @@
       <label for="nav-toggle" class="nav-toggle-label">☰</label>
       <nav class="nav">
         <a href="index.html" class="nav__a1" id="nav__a1">Domov</a>
-        <a href="/shop/shop.html" class="nav__a3" id="nav__a3">Obchod</a>
+        <a href="/shop/index.html" class="nav__a3" id="nav__a3">Obchod</a>
         <a href="#contact" class="nav__a4" id="nav__a4">Kontakt</a>
       </nav>
     </header>
@@ -257,127 +258,20 @@
       </p>  
     </footer>
     <!-- Inline script: toggle language buttons and swap card content -->
-    <script>
-      (function(){
-        function initLangSwitch(){
-          const buttons = Array.from(document.querySelectorAll('.filters .filter'));
-          const cards = Array.from(document.querySelectorAll('.cards-grid .card'));
-
-          function setLang(lang){
-            buttons.forEach(btn => {
-              const isActive = btn.dataset.lang === lang;
-              btn.classList.toggle('active', isActive);
-              btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-            });
-            cards.forEach(card => {
-              const sk = card.querySelector('.card__sk');
-              const de = card.querySelector('.card__de');
-              if(sk) sk.hidden = (lang !== 'sk');
-              if(de) de.hidden = (lang !== 'de');
-            });
-          }
-
-          if(buttons.length === 0) return;
-
-          buttons.forEach(btn => {
-            btn.addEventListener('click', () => setLang(btn.dataset.lang));
-            btn.addEventListener('keydown', (e) => {
-              if(e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                setLang(btn.dataset.lang);
-              }
-            });
-          });
-
-          // initialise: prefer an already-marked active button, otherwise default to 'sk'
-          const activeBtn = buttons.find(b => b.classList.contains('active'));
-          setLang(activeBtn ? activeBtn.dataset.lang : 'sk');
-        }
-
-        if(document.readyState === 'loading'){
-          document.addEventListener('DOMContentLoaded', initLangSwitch);
-        } else {
-          initLangSwitch();
-        }
-      })();
-    </script>
+    <script src="assets/js/script.js"></script>
     <!-- Brython: smooth scroll handlers for header contact and card buttons -->
-    <script type="text/python">
-  from browser import document, window
-
-  def scroll_to_contact(ev=None):
-    contact = document.getElementById('contact')
-    if contact:
-      contact.scrollIntoView({'behavior':'smooth'})
-
-  # header contact link should scroll instead of navigating away
-  nav_contact = document.getElementById('nav__a4')
-  if nav_contact:
-    def nav_click(ev):
-      ev.preventDefault()
-      scroll_to_contact(ev)
-    nav_contact.bind('click', nav_click)
-
-  # attach to card buttons
-  for btn in document.select('.card__contact-btn'):
-    def make_handler(b):
-      def _handler(ev):
-        ev.preventDefault()
-        scroll_to_contact(ev)
-      return _handler
-    btn.bind('click', make_handler(btn))
-
-  # Quote toggling: hover or click toggles between two quotes and persists until toggled again
-  quotes = [
-    {"text": "To som v živote nerobila, to mi určite pôjde!", "author": "Neznámy autor"},
-    {"text": "Som presvedčená, že každý svojím konaním ovplyvňuje svoje smerovanie, svoju budúcnosť.", "author": "Neznámy autor"}
-  ]
-
-  quote_el = document.getElementById('hero-quote')
-  quote_text = quote_el.select_one('.quote__text') if quote_el else None
-  quote_author = quote_el.select_one('.quote__author') if quote_el else None
-
-  current_idx = 0
-  def update_quote(idx):
-    global current_idx
-    current_idx = idx
-    if quote_text:
-      quote_text.text = quotes[idx]['text']
-    if quote_author:
-      quote_author.text = quotes[idx]['author']
-
-  def toggle_quote(ev=None):
-    # crossfade: add fade-out, update after timeout, then fade back in
-    if not quote_el:
-      return
-    # prevent re-entrancy
-    if 'fade-out' in quote_el.classList:
-      return
-    new_idx = 1 - current_idx
-    # start fade-out
-    quote_el.classList.add('fade-out')
-
-    def finish():
-      update_quote(new_idx)
-      quote_el.classList.remove('fade-out')
-
-    # wait for CSS fade-out to complete (~280ms), then swap and fade-in
-    window.setTimeout(finish, 300)
-
-  if quote_el:
-    # bind mouseenter and click so desktop hover or touch/click toggles
-    quote_el.bind('mouseenter', toggle_quote)
-    quote_el.bind('click', toggle_quote)
-
-    # keyboard support: Enter or Space toggles when focused
-    def key_handler(ev):
-      if ev.key in ('Enter', ' '):
-        ev.preventDefault()
-        toggle_quote(ev)
-    quote_el.bind('keydown', key_handler)
-
-    # ensure initial content
-    update_quote(current_idx)
-    </script>
+    <script type="text/python" src="assets/py/script.py"></script>
+    <!-- Netlify Identity widget init -->
+    <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
   </body>
 </html>
