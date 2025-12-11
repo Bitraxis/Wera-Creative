@@ -1,5 +1,7 @@
 {
   "title": "Nalepky",
   "image": "/assets/materials/uploads/earth-day.jpg",
-  "price": 3.9
+  "price": 5.5,
+  "sale": true,
+  "salePrice": 3.9
 }
