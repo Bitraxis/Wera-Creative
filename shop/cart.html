@@ -1,15 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Your Cart</title>
-    <link rel="stylesheet" href="shop.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-    <h1>Your Cart</h1>
-    <div id="cart-items"></div>
-    <button id="checkout">Checkout</button>
+    <script src="/assets/ts/script.ts"></script>
+    <div id="cart">
+        <h2>Your Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p id="cart-total">Total: $0.00</p>
+        <button id="clear-cart">Clear Cart</button>
+    </div>
+    <script>
+        const cart = new ShoppingCart();
 
-    <script src="cart.js"></script>
+        function updateCartDisplay() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            cartItemsContainer.innerHTML = '';
+            cart.getCart().items.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price} x ${item.quantity}`;
+                cartItemsContainer.appendChild(li);
+            });
+            cartTotal.textContent = `Total: $${cart.getCart().total.toFixed(2)}`;
+        }
+
+        document.getElementById('clear-cart').addEventListener('click', () => {
+            cart.clearCart();
+            updateCartDisplay();
+        });
+
+        // Example of adding items to the cart for demonstration
+        cart.addItem({ id: '1', name: 'Item 1', price: 10.00, quantity: 1 });
+        cart.addItem({ id: '2', name: 'Item 2', price: 15.00, quantity: 2 });
+        updateCartDisplay();
+    </script>
 </body>
 </html>
