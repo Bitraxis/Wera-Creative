@@ -1,16 +1,10 @@
 async function loadProducts() {
     const grid = document.getElementById("product-grid");
 
-  // Fetch the list of product files
-    const productFiles = await fetch("/assets/_shop/products/")
-        .then(res => res.text());
+  // Fetch the products manifest
+    const products = await fetch("/assets/_shop/products.json").then(res => res.json());
 
-  // Extract filenames from directory listing
-    const matches = productFiles.match(/href="([^"]+\.json)"/g) || [];
-    const files = matches.map(m => m.replace('href="', '').replace('"', ''));
-
-    for (const file of files) {
-        const product = await fetch("/assets/_shop/products/" + file).then(r => r.json());
+    for (const product of products) {
 
         const card = document.createElement("div");
         card.className = "product-card";
