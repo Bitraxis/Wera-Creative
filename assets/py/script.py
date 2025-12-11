@@ -68,15 +68,12 @@ def toggle_quote(ev=None):
     # start fade-out
     quote_el.classList.add("fade-out")
 
-
-def finish():
-    update_quote(new_idx)
-    quote_el.classList.remove("fade-out")
+    def finish():
+        update_quote(new_idx)
+        quote_el.classList.remove("fade-out")
 
     # wait for CSS fade-out to complete (~280ms), then swap and fade-in
-
-
-window.setTimeout(finish, 300)
+    window.setTimeout(finish, 300)
 
 if quote_el:
     # bind mouseenter and click so desktop hover or touch/click toggles
