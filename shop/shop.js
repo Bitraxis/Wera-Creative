@@ -1,33 +1,29 @@
 async function loadProducts() {
-    const grid = document.getElementById("product-grid");
+  const grid = document.getElementById("product-grid");
 
-  // Fetch the products manifest
-    const products = await fetch("/assets/_shop/products.json").then(res => res.json());
+  // Fetch the list of product files
+  const productFiles = await fetch("/assets/_shop/products/")
+    .then(res => res.text());
 
-    for (const product of products) {
+  // Extract filenames from directory listing
+  const matches = productFiles.match(/href="([^"]+\.json)"/g) || [];
+  const files = matches.map(m => m.replace('href="', '').replace('"', ''));
 
-        const card = document.createElement("div");
-        card.className = "product-card";
+  for (const file of files) {
+    const product = await fetch("/assets/_shop/products/" + file).then(r => r.json());
 
-        let priceHTML = `<div class="price">${product.price}€</div>`;
-        if (product.sale && product.salePrice) {
-            priceHTML = `
-                <div class="price-section">
-                    <span class="price-original">${product.price}€</span>
-                    <span class="price-sale">${product.salePrice}€</span>
-                </div>
-            `;
-        }
+    const card = document.createElement("div");
+    card.className = "product-card";
 
-        card.innerHTML = `
-        <img src="${product.image}" alt="${product.title}">
-        <h3>${product.title}</h3>
-        ${priceHTML}
-        <p>${product.description || ""}</p>
-        `;
+    card.innerHTML = `
+      <img src="${product.image}" alt="${product.name}">
+      <h3>${product.name}</h3>
+      <div class="price">$${product.price}</div>
+      <p>${product.description || ""}</p>
+    `;
 
-        grid.appendChild(card);
-    }
+    grid.appendChild(card);
+  }
 }
 
 loadProducts();
