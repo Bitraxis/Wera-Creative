@@ -14,7 +14,6 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
       - { label: "Price", name: "price", widget: "number", value_type: "float" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Description", name: "description", widget: "text", required: false }
