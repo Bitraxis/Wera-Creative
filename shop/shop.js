@@ -10,9 +10,9 @@ async function loadProducts() {
         card.className = "product-card";
 
         card.innerHTML = `
-        <img src="${product.image}" alt="${product.name}">
-        <h3>${product.name}</h3>
-        <div class="price">$${product.price}</div>
+        <img src="${product.image}" alt="${product.title}">
+        <h3>${product.title}</h3>
+        <div class="price">${product.price}€</div>
         <p>${product.description || ""}</p>
         `;
 
