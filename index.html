@@ -23,7 +23,6 @@
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.13.2/brython_stdlib.js">
     </script>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body onload="brython()">
     <header class="header" id="header">
@@ -261,17 +260,5 @@
     <script src="assets/js/script.js"></script>
     <!-- Brython: smooth scroll handlers for header contact and card buttons -->
     <script type="text/python" src="assets/py/script.py"></script>
-    <!-- Netlify Identity widget init -->
-    <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", (user) => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "assets/admin/";
-          });
-        }
-      });
-    }
-  </script>
   </body>
 </html>

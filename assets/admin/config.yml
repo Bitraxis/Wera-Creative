@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Bitraxis/Wera-Creative
   branch: main
 
 media_folder: "/assets/materials/uploads"
