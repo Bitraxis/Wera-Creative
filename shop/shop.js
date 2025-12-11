@@ -9,10 +9,20 @@ async function loadProducts() {
         const card = document.createElement("div");
         card.className = "product-card";
 
+        let priceHTML = `<div class="price">${product.price}€</div>`;
+        if (product.sale && product.salePrice) {
+            priceHTML = `
+                <div class="price-section">
+                    <span class="price-original">${product.price}€</span>
+                    <span class="price-sale">${product.salePrice}€</span>
+                </div>
+            `;
+        }
+
         card.innerHTML = `
         <img src="${product.image}" alt="${product.title}">
         <h3>${product.title}</h3>
-        <div class="price">${product.price}€</div>
+        ${priceHTML}
         <p>${product.description || ""}</p>
         `;
 

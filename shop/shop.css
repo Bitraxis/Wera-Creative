@@ -27,3 +27,27 @@
     font-weight: bold;
     margin-top: 8px;
 }
+
+.price-section {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.price-original {
+    font-size: 0.95rem;
+    color: #999;
+    text-decoration: line-through;
+    font-weight: 600;
+}
+
+.price-sale {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #fd6220;
+    background: rgba(253, 98, 32, 0.08);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+}
