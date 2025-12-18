@@ -90,6 +90,69 @@ def key_handler(ev):
     quote_el.bind("keydown", key_handler)
 
     # ensure initial content
-
-
 update_quote(current_idx)
+
+
+# Language switcher with animated crossfade
+buttons = document.select(".filters .filter")
+cards = document.select(".cooperation .cards-grid .card")
+
+current_lang = "sk"
+
+
+def set_lang_animated(lang):
+    """Switch language with button animation"""
+    global current_lang
+    if lang == current_lang:
+        return
+
+    current_lang = lang
+
+    # Update button states (animated via CSS transition)
+    for btn in buttons:
+        is_active = btn.attrs.get("data-lang") == lang
+        if is_active:
+            btn.classList.add("active")
+            btn.attrs["aria-pressed"] = "true"
+        else:
+            btn.classList.remove("active")
+            btn.attrs["aria-pressed"] = "false"
+
+    # Instantly swap card content visibility
+    for card in cards:
+        sk = card.select_one(".card__sk")
+        de = card.select_one(".card__de")
+
+        if not sk or not de:
+            continue
+
+        # Swap visibility immediately
+        sk.hidden = lang != "sk"
+        de.hidden = lang != "de"
+
+
+# Bind click handlers to filter buttons
+for btn in buttons:
+    def make_handler(b):
+        def handler(ev):
+            lang = b.attrs.get("data-lang")
+            set_lang_animated(lang)
+
+        return handler
+
+    btn.bind("click", make_handler(btn))
+
+    # Keyboard support
+    def make_key_handler(b):
+        def key_handler(ev):
+            if ev.key in ("Enter", " "):
+                ev.preventDefault()
+                lang = b.attrs.get("data-lang")
+                set_lang_animated(lang)
+
+        return key_handler
+
+    btn.bind("keydown", make_key_handler(btn))
+
+# Initialize with Slovak
+set_lang_animated("sk")
