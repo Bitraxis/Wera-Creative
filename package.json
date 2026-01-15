@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "inline-webassembly": "^1.0.7"
   }
 }
