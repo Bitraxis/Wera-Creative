@@ -10,9 +10,10 @@ media_folder:  /static/media
 public_folder: /media
 
 collections:
-  - name: posts
-    label: Posts
-    folder: /content/posts
+  - name: shop
+    label: Shop
+    icon: shopping_cart
+    folder: /content/shop
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
