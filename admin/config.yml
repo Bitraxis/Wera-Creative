@@ -4,6 +4,7 @@ backend:
   name: github
   repo: Bitraxis/Wera-Creative
   branch: main
+  base_url: https://sveltia-cms-auth.hyauzane.workers.dev/
 
 media_folder:  /static/media
 public_folder: /media
