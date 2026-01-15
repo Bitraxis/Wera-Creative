@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: Bitraxis/Wera-Creative
+  branch: main
+
+media_folder:  /static/media
+public_folder: /media
+
+collections:
+  - name: posts
+    label: Posts
+    folder: /content/posts
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Body, name: body, widget: markdown }
