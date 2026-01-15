@@ -164,7 +164,6 @@ body{font-family:var(--font-family,'Raleway',sans-serif);background:var(--bg);co
   .nav a{display:block;padding:0.6rem 0.25rem;color:inherit;}
 }
 
-
-
-
-
+textarea {
+  resize: none;
+}
