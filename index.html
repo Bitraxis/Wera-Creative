@@ -31,7 +31,6 @@
       <label for="nav-toggle" class="nav-toggle-label">☰</label>
       <nav class="nav">
         <a href="index.html" class="nav__a1" id="nav__a1">Domov</a>
-        <a href="./shop/index.html" class="nav__a3" id="nav__a3">Obchod</a>
         <a href="#contact" class="nav__a4" id="nav__a4">Kontakt</a>
       </nav>
     </header>
@@ -98,17 +97,13 @@
             Portfólio
           </h2>
         </header>
-        <!-- Portfolio meta (title, subtitle) -->
-        <div class="portfolio__meta">
-          <h3 class="portfolio__title">PORTFÓLIO</h3>
-          <div class="portfolio__subtitle">Veronika Zabojníková</div>
-        </div>
-
         <!-- Short description / intro -->
         <p class="portfolio__intro">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error a
-          obcaecati ducimus laboriosam accusamus sed asperiores officiis natus
-          minima velit, dolores architecto laborum saepe.
+          <div class="canva__div">
+            <iframe class="canva__iframe" loading="lazy"
+              src="https://www.canva.com/design/DAGfkTg7y5U/wAX0R3wIAYmskSK3NsoFow/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+            </iframe>
+          </div>
         </p>
 
       </section>
@@ -119,10 +114,7 @@
           </h2>
         </header>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          laboriosam impedit nam ipsam cum aliquid reiciendis deleniti, ratione
-          facilis dolores vero. Nobis non adipisci nam minima. Officia
-          reiciendis doloribus amet!
+          Ponúkam rôzne balíky služieb, ktoré sú prispôsobené potrebám malých a stredných podnikov, ako aj jednotlivcov. Či už potrebujete jednorázovú pomoc alebo pravidelnú podporu, mám pre vás riešenie.
         </p>
 
         <!-- simple filter controls above cards: act as a language switch -->
@@ -138,14 +130,14 @@
               <p>Jednorázový výkon</p>
               <p>Občasná spolupráca</p>
               <p>16€</p>
-              <button class="card__contact-btn" type="button" aria-label="Kontaktovať">Záujem</button>
+              <button class="card__contact-btn" type="button" aria-label="Kontaktovať" id="hodinova-sk">Záujem</button>
             </div>
             <div class="card__content card__de" hidden>
               <h4>Hodinová sadzba</h4>
               <p>Jednorázový výkon</p>
               <p>Občasná spolupráca</p>
               <p>20€</p>
-              <button class="card__contact-btn" type="button" aria-label="Kontaktieren">Záujem</button>
+              <button class="card__contact-btn" type="button" aria-label="Kontaktieren" id="hodinova-de">Záujem</button>
             </div>
           </div>
           <div class="card">
@@ -154,14 +146,14 @@
               <p>10 hodín práce rozložených v mesiaci</p>
               <p>15€ / hodina</p>
               <p>150€</p>
-              <button class="card__contact-btn" type="button" aria-label="Kontaktovať">Záujem</button>
+              <button class="card__contact-btn" type="button" aria-label="Kontaktovať" id="mini-sk">Záujem</button>
             </div>
             <div class="card__content card__de" hidden>
               <h4>Mini balík</h4>
               <p>10 hodín práce rozložených v mesiaci</p>
               <p>19€ / hodina</p>
               <p>190€</p>
-              <button class="card__contact-btn" type="button" aria-label="Kontaktieren">Záujem</button>
+              <button class="card__contact-btn" type="button" aria-label="Kontaktieren" id="mini-de">Záujem</button>
             </div>
           </div>
           <div class="card">
@@ -170,14 +162,14 @@
               <p>20 hodín práce rozložených v mesiaci</p>
               <p>14€ / hodina</p>
               <p>280€</p>
-              <button class="card__contact-btn" type="button" aria-label="Kontaktovať">Záujem</button>
+              <button class="card__contact-btn" type="button" aria-label="Kontaktovať" id="maxi-sk">Záujem</button>
             </div>
             <div class="card__content card__de" hidden>
               <h4>Maxi balík</h4>
               <p>20 hodín práce rozložených v mesiaci</p>
               <p>18€ / hodina</p>
               <p>360€</p>
-              <button class="card__contact-btn" type="button" aria-label="Kontaktieren">Záujem</button>
+              <button class="card__contact-btn" type="button" aria-label="Kontaktieren" id="maxi-de">Záujem</button>
             </div>
           </div>
           <div class="card">
@@ -186,14 +178,14 @@
               <p>30 hodín práce rozložených v mesiaci</p>
               <p>13€ / hodina</p>
               <p>390€</p>
-              <button class="card__contact-btn" type="button" aria-label="Kontaktovať">Záujem</button>
+              <button class="card__contact-btn" type="button" aria-label="Kontaktovať" id="maxi-plus-sk">Záujem</button>
             </div>
             <div class="card__content card__de" hidden>
               <h4>Maxi PLUS balík</h4>
               <p>30 hodín práce rozložených v mesiaci</p>
               <p>17€ / hodina</p>
               <p>510€</p>
-              <button class="card__contact-btn" type="button" aria-label="Kontaktieren">Záujem</button>
+              <button class="card__contact-btn" type="button" aria-label="Kontaktieren" id="maxi-plus-de">Záujem</button>
             </div>
           </div>
         </div>
@@ -227,7 +219,7 @@
         </div>
 
         <!-- Contact form (simple layout) -->
-        <form class="contact__form" action="#" method="post" netlify>
+        <form class="contact__form" action="https://formsubmit.co/info@asistentwera.sk" method="POST">
           <div class="form-row">
             <label for="name">Meno</label>
             <input id="name" name="name" type="text" />
@@ -241,18 +233,34 @@
             <input id="phone" name="phone" type="tel" />
           </div>
           <div class="form-row">
+            <div class="serviceDiv">
+              <label for="service">Služba</label>
+              <br>
+              <select id="service" name="service">
+                <option value="hodinova-sk">Hodinová sadzba (SK)</option>
+                <option value="mini-sk">Mini balík (SK)</option>
+                <option value="maxi-sk">Maxi balík (SK)</option>
+                <option value="maxi-plus-sk">Maxi PLUS balík (SK)</option>
+                <option value="hodinova-de">Hodinová sadzba (DE)</option>
+                <option value="mini-de">Mini balík (DE)</option>
+                <option value="maxi-de">Maxi balík (DE)</option>
+                <option value="maxi-plus-de">Maxi PLUS balík (DE)</option>
+              </select>                 
+            </div>
+          </div>
+          <div class="form-row">
             <label for="message">Správa</label>
             <textarea id="message" name="message" rows="5"></textarea>
           </div>
           <div class="form-row">
-            <button type="submit" class="btn">Odoslať</button>
+            <input type="submit" class="btn" value="Odoslať" />
           </div>
         </form>
       </section>
     </main>
     <footer class="footer" id="footer">
       <p class="footer__p" id="footer__p">
-        © 2025 Wera Creative. Všetky práva vyhradené.
+        © 2026 Wera Creative. Všetky práva vyhradené.
       </p>  
     </footer>
     <!-- Brython: handles all interactions (scroll, quote toggle, language switch) -->

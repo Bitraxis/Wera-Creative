@@ -34,9 +34,36 @@
         setLang(activeBtn ? activeBtn.dataset.lang : 'sk');
     }
 
-    if(document.readyState === 'loading'){
-        document.addEventListener('DOMContentLoaded', initLangSwitch);
-    } else {
+    function initCardToFormSelection(){
+        const serviceSelect = document.querySelector('#service');
+        const buttons = Array.from(document.querySelectorAll('.card__contact-btn'));
+        if(!serviceSelect || buttons.length === 0) return;
+
+        buttons.forEach(btn => {
+            const targetValue = btn.id;
+            if(!targetValue) return;
+            btn.addEventListener('click', () => {
+                const option = serviceSelect.querySelector(`option[value="${targetValue}"]`);
+                if(option){
+                    serviceSelect.value = targetValue;
+                    serviceSelect.dispatchEvent(new Event('change', { bubbles: true }));
+                }
+                const form = document.querySelector('.contact__form');
+                if(form){
+                    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    }
+
+    function init(){
         initLangSwitch();
+        initCardToFormSelection();
+    }
+
+    if(document.readyState === 'loading'){
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
     }
 })();
