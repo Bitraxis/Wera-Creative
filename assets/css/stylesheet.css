@@ -12,9 +12,13 @@
   --muted: rgba(15,15,16,0.08);
 }
 
+* {
+  scrollbar-width: none; /* for Firefox */
+  -ms-overflow-style: none; /* for Internet Explorer and Edge */
+}
 /* Base */
 /* Use flex layout so footer can sit at the bottom when content is short */
-html,body{height:100%;padding:0;margin:0;}
+html,body{height:100%;padding:0;margin:0; scrollbar-width: none;}
 body{font-family:var(--font-family,'Raleway',sans-serif);background:var(--bg);color:var(--txt);line-height:1.6;margin:0;padding:0;min-height:100vh;display:flex;flex-direction:column;}
 /* allow main content to grow to push footer down (keeps behaviour safe if .main exists) */
 .main{flex:1;}
@@ -117,7 +121,7 @@ a, p, label {
 .filter.active{background:var(--gc1);color:#fff;border-color:var(--gc1);}
 
 /* small button inside cards that scrolls to contact */
-.card__contact-btn{margin-top:0.5rem;padding:0.4rem 0.65rem;background:var(--gc1);color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;}
+.card__contact-btn{margin-top:0.5rem;padding:0.4rem 0.65rem;background:var(--gc1);color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;scrollbar-width: none;}
 .card__contact-btn:focus{outline:2px solid rgba(253,98,32,0.6);outline:2px solid color-mix(in srgb,var(--gc1) 60%,white);}
 
 /* Contact cards styling tweaks */
