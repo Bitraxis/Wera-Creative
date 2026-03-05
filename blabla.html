@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+	import { h, render } from 'https://esm.sh/preact';
+	import htm from 'https://esm.sh/htm';
+
+	// Initialize htm with Preact
+	const html = htm.bind(h);
+
+	function App(props) {
+		return html`
+			<h1>Hello ${props.name}!</h1>
+		`;
+	}
+
+	render(
+		html`<${App} name="Preact & HTM" />`,
+		document.body
+	);
+    </script>
+</body>
+</html>
