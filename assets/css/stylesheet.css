@@ -629,3 +629,10 @@ p {
 a {
   text-decoration: none;
 }
+
+.hideme {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  
+}
