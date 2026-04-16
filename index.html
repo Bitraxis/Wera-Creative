@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wera Creative</title>
     <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
     <link rel="stylesheet" href="assets/css/basesheet.css" />
     <link rel="stylesheet" href="assets/css/stylesheet.css" />
     <script type="importmap">
@@ -23,6 +24,7 @@
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.13.2/brython_stdlib.js">
     </script>
+    <script src="//unpkg.com/alpinejs" defer></script>
   </head>
   <body onload="brython()">
     <header class="header" id="header">
@@ -52,7 +54,7 @@
           <h2 class="about__header--h2" id="about__header--h2">O mne</h2>
         </header>
         <h3 class="about__h3">Môj príbeh</h3>
-        <p>Vyštudovala som podvojné účtovníctvo a manažment, mnoho rokov po skončení školy som žila a pracovala v zahraničí a popritom spoznávala rôzne kultúry. Tieto životné cesty ma naučili mnohému ako absolútnej samostatnosti, prispôsobivosti. Žiadny kurz Vás nenaučí niečo podobné. <strong> hovorím nemeckým jazykom a celkom dobre anglicky.</strong></p>
+        <p>Vyštudovala som podvojné účtovníctvo a manažment, mnoho rokov po skončení školy som žila a pracovala v zahraničí a popritom spoznávala rôzne kultúry. Tieto životné cesty ma naučili mnohému ako absolútnej samostatnosti, prispôsobivosti. Žiadny kurz Vás nenaučí niečo podobné. <strong> hovorím nemeckým jazykom a anglickým jazykom.</strong></p>
         <p>Po rokoch práce v zahraničí som sa usadila v rodnom kraji na Slovensku a založila si rodinu, ktorá je pre mňa prioritou. Naďalej som naberala <strong>dlhoročné odborné skúsenosti asistentky</strong> vrcholového manažmentu, neskôr <strong>špecialistky podpory zákazníkov</strong> v oblastiach služieb, obchodu, IT technológií alebo aj <strong>personálneho manažmentu.</strong></p>
         <p>Ešte pred niekoľkými mesiacmi bolo ťažké predstaviť si plnohodnotne a efektívne pracovať z domu, na diaľku. Schopnosť adaptovať sa v dnešnej dobe je veľmi kľúčová pokiaľ chcete vyťažiť to najlepšie z každej zmeny. Mňa úplne pohltila myšlienka pomáhať zákazníkom touto formou. Obom stranám takto dokážem ušetriť čas, energiu a aj peniaze. Vďaka <strong>vysokej flexibilite</strong> a <strong>nízkej réžii</strong> je virtuálna asistentka efektívnym personálnym riešením pre podnikateľov rôznych veľkostí.</p>
         <p>Prepájam moje dlhoročne nadobúdané profesionálne zručnosti v korporátnom svete a súkromnom sektore. Avšak ani po viac ako 12 rokoch profesionálneho rastu sa neprestávam vzdelávať a nadobúdať nové zručnosti a schopnosti, z ktorých profitujú ďalej moji klienti.</p>
@@ -123,40 +125,26 @@
               <h4>Hodinová sadzba</h4>
               <p>Jednorázový výkon</p>
               <p>Občasná spolupráca</p>
-              <p>16€</p>
-              <!-- Calendly link widget begin -->
-              <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-              <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-              <br>
-              <a class="card__contact-btn" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/hyauzane-duck/mini-balik?background_color=fdfcfc&text_color=321001&primary_color=ff6220'});return false;">Zajednajte si čas so mnou</a>
-              <!-- Calendly link widget end -->
+              <p>16€ / hodina</p>
             </div>
             <div class="card__content card__de" hidden>
               <h4>Hodinová sadzba</h4>
               <p>Jednorázový výkon</p>
               <p>Občasná spolupráca</p>
-              <p>20€</p>
-              <!-- Calendly link widget begin -->
-              <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-              <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-              <br>
-              <a class="card__contact-btn" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/hyauzane-duck/hodinova-sadzba-de?background_color=fdfcfc&text_color=321001&primary_color=fd6220'});return false;">Zajednajte si čas so mnou</a>
-              <!-- Calendly link widget end -->
+              <p>20€ / hodina</p>
             </div>
           </div>
           <div class="card">
             <div class="card__content card__sk">
               <h4>Mini balík</h4>
               <p>10 hodín práce rozložených v mesiaci</p>
-              <p>15€ / hodina</p>
-              <p>150€</p>
+              <p>~ 15€ / hodina</p>
               <button class="card__contact-btn" type="button" aria-label="Kontaktovať" id="mini-sk">Záujem</button>
             </div>
             <div class="card__content card__de" hidden>
               <h4>Mini balík</h4>
               <p>10 hodín práce rozložených v mesiaci</p>
-              <p>19€ / hodina</p>
-              <p>190€</p>
+              <p>~ 19€ / hodina</p>
               <button class="card__contact-btn" type="button" aria-label="Kontaktieren" id="mini-de">Záujem</button>
             </div>
           </div>
@@ -164,15 +152,13 @@
             <div class="card__content card__sk">
               <h4>Maxi balík</h4>
               <p>20 hodín práce rozložených v mesiaci</p>
-              <p>14€ / hodina</p>
-              <p>280€</p>
+              <p>~ 14€ / hodina</p>
               <button class="card__contact-btn" type="button" aria-label="Kontaktovať" id="maxi-sk">Záujem</button>
             </div>
             <div class="card__content card__de" hidden>
               <h4>Maxi balík</h4>
               <p>20 hodín práce rozložených v mesiaci</p>
-              <p>18€ / hodina</p>
-              <p>360€</p>
+              <p>~ 18€ / hodina</p>
               <button class="card__contact-btn" type="button" aria-label="Kontaktieren" id="maxi-de">Záujem</button>
             </div>
           </div>
@@ -180,15 +166,13 @@
             <div class="card__content card__sk">
               <h4>Maxi PLUS balík</h4>
               <p>30 hodín práce rozložených v mesiaci</p>
-              <p>13€ / hodina</p>
-              <p>390€</p>
+              <p>~ 13€ / hodina</p>
               <button class="card__contact-btn" type="button" aria-label="Kontaktovať" id="maxi-plus-sk">Záujem</button>
             </div>
             <div class="card__content card__de" hidden>
               <h4>Maxi PLUS balík</h4>
               <p>30 hodín práce rozložených v mesiaci</p>
-              <p>17€ / hodina</p>
-              <p>510€</p>
+              <p>~ 17€ / hodina</p>
               <button class="card__contact-btn" type="button" aria-label="Kontaktieren" id="maxi-plus-de">Záujem</button>
             </div>
           </div>
