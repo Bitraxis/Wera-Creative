@@ -310,7 +310,7 @@ label {
   min-height: 160px;
   padding: 1.15rem;
 }
-.card__content h4 {
+.card__content h3 {
   margin: 0 0 0.4rem 0;
   font-size: 1.12rem;
   font-weight: 700;
