@@ -16,6 +16,10 @@
   scrollbar-width: none; /* for Firefox */
   -ms-overflow-style: none; /* for Internet Explorer and Edge */
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
 /* Base */
 /* Use flex layout so footer can sit at the bottom when content is short */
 html,body{height:100%;padding:0;margin:0; scrollbar-width: none;}
