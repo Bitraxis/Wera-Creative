@@ -7,26 +7,13 @@
     <link rel="stylesheet" href="assets/css/normalize.css" />
     <link rel="stylesheet" href="assets/css/basesheet.css" />
     <link rel="stylesheet" href="assets/css/stylesheet.css" />
-    <script type="importmap">
-      {
-        "imports": {
-          "@material/web/": "https://esm.run/@material/web/"
-        }
-      }
-    </script>
-    <script type="module">
-      import "@material/web/all.js";
-      import { styles as typescaleStyles } from "@material/web/typography/md-typescale-styles.js";
-      document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
     <script
-      type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/brython@3.14.0/brython.min.js"
       defer
       async
     ></script>
     <script
-      type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/brython@3.14.0/brython_stdlib.js"
       defer
       async
@@ -107,18 +94,16 @@
           </h2>
         </header>
         <!-- Short description / intro -->
-        <p class="portfolio__intro">
-          <div class="canva__div">
-            <iframe
-              class="canva__iframe"
-              loading="lazy"
-              src="https://www.canva.com/design/DAGfkTg7y5U/wAX0R3wIAYmskSK3NsoFow/view?embed"
-              allowfullscreen="allowfullscreen"
-              allow="fullscreen"
-            >
-            </iframe>
-          </div>
-        </p>
+        <div class="canva__div portfolio_intro" >
+          <iframe
+            class="canva__iframe"
+            loading="lazy"
+            src="https://www.canva.com/design/DAGfkTg7y5U/wAX0R3wIAYmskSK3NsoFow/view?embed"
+            allowfullscreen="allowfullscreen"
+            allow="fullscreen"
+          >
+          </iframe>
+        </div>
         <h3 class="about__h3">Moja vízia a hodnoty</h3>
         <!-- Values cards -->
         <div class="cards-grid about__values">
