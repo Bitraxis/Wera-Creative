@@ -1,4 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* ! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
@@ -10,6 +10,7 @@
 
 html {
   line-height: 1.15; /* 1 */
+  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
@@ -19,6 +20,38 @@ html {
 /**
  * Remove the margin in all browsers.
  */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}
 
 body {
   margin: 0;
@@ -75,6 +108,11 @@ pre {
 
 a {
   background-color: transparent;
+  &:active,
+	&:hover {
+		outline: 0;
+	}
+}
 }
 
 /**
