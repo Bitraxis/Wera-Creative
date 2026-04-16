@@ -61,11 +61,11 @@
   font-optical-sizing: auto;
   font-weight: var(--weight-regular);
   font-style: normal;
-  
+
   /* Material 3 Reference Tokens - Typeface */
   --md-ref-typeface-brand: "Raleway", sans-serif;
   --md-ref-typeface-plain: "Raleway", sans-serif;
-  
+
   /* Material 3 System Tokens - Shape */
   --md-sys-shape-corner-none: 0px;
   --md-sys-shape-corner-extra-small: 4px;
@@ -91,23 +91,23 @@
     --surface4: var(--surface4-light);
     --surface-shadow: var(--surface-shadow-light);
     --shadow-strength: var(--shadow-strength-light);
-    
+
     /* Material 3 Light Theme Color Tokens */
     --md-sys-color-primary: hsl(18, 98%, 56%);
-    --md-sys-color-on-primary: #FFFFFF;
+    --md-sys-color-on-primary: #ffffff;
     --md-sys-color-primary-container: hsl(18, 95%, 88%);
     --md-sys-color-on-primary-container: hsl(18, 98%, 16%);
     --md-sys-color-secondary: hsl(18, 60%, 50%);
-    --md-sys-color-on-secondary: #FFFFFF;
+    --md-sys-color-on-secondary: #ffffff;
     --md-sys-color-secondary-container: hsl(18, 60%, 90%);
     --md-sys-color-on-secondary-container: hsl(18, 60%, 20%);
     --md-sys-color-tertiary: hsl(300, 98%, 56%);
-    --md-sys-color-on-tertiary: #FFFFFF;
+    --md-sys-color-on-tertiary: #ffffff;
     --md-sys-color-tertiary-container: hsl(300, 95%, 90%);
     --md-sys-color-on-tertiary-container: hsl(300, 98%, 20%);
-    --md-sys-color-error: #BA1A1A;
-    --md-sys-color-on-error: #FFFFFF;
-    --md-sys-color-error-container: #FFDAD6;
+    --md-sys-color-error: #ba1a1a;
+    --md-sys-color-on-error: #ffffff;
+    --md-sys-color-error-container: #ffdad6;
     --md-sys-color-on-error-container: #410002;
     --md-sys-color-background: var(--surface2-light);
     --md-sys-color-on-background: var(--text1-light);
@@ -162,7 +162,7 @@
     --surface4: var(--surface4-dark);
     --surface-shadow: var(--surface-shadow-dark);
     --shadow-strength: var(--shadow-strength-dark);
-    
+
     /* Material 3 Dark Theme Color Tokens */
     --md-sys-color-primary: hsl(18, 98%, 70%);
     --md-sys-color-on-primary: hsl(18, 98%, 20%);
@@ -176,10 +176,10 @@
     --md-sys-color-on-tertiary: hsl(300, 98%, 30%);
     --md-sys-color-tertiary-container: hsl(300, 98%, 40%);
     --md-sys-color-on-tertiary-container: hsl(300, 95%, 92%);
-    --md-sys-color-error: #FFB4AB;
+    --md-sys-color-error: #ffb4ab;
     --md-sys-color-on-error: #690005;
-    --md-sys-color-error-container: #93000A;
-    --md-sys-color-on-error-container: #FFDAD6;
+    --md-sys-color-error-container: #93000a;
+    --md-sys-color-on-error-container: #ffdad6;
     --md-sys-color-background: var(--surface1-dark);
     --md-sys-color-on-background: var(--text1-dark);
     --md-sys-color-surface: var(--surface2-dark);
@@ -260,76 +260,76 @@
   --md-sys-typescale-display-large-size: 57px;
   --md-sys-typescale-display-large-line-height: 64px;
   --md-sys-typescale-display-large-weight: var(--weight-regular);
-  
+
   --md-sys-typescale-display-medium-font: var(--md-ref-typeface-brand);
   --md-sys-typescale-display-medium-size: 45px;
   --md-sys-typescale-display-medium-line-height: 52px;
   --md-sys-typescale-display-medium-weight: var(--weight-regular);
-  
+
   --md-sys-typescale-display-small-font: var(--md-ref-typeface-brand);
   --md-sys-typescale-display-small-size: 36px;
   --md-sys-typescale-display-small-line-height: 44px;
   --md-sys-typescale-display-small-weight: var(--weight-regular);
-  
+
   /* Headline */
   --md-sys-typescale-headline-large-font: var(--md-ref-typeface-brand);
   --md-sys-typescale-headline-large-size: 32px;
   --md-sys-typescale-headline-large-line-height: 40px;
   --md-sys-typescale-headline-large-weight: var(--weight-regular);
-  
+
   --md-sys-typescale-headline-medium-font: var(--md-ref-typeface-brand);
   --md-sys-typescale-headline-medium-size: 28px;
   --md-sys-typescale-headline-medium-line-height: 36px;
   --md-sys-typescale-headline-medium-weight: var(--weight-regular);
-  
+
   --md-sys-typescale-headline-small-font: var(--md-ref-typeface-brand);
   --md-sys-typescale-headline-small-size: 24px;
   --md-sys-typescale-headline-small-line-height: 32px;
   --md-sys-typescale-headline-small-weight: var(--weight-regular);
-  
+
   /* Title */
   --md-sys-typescale-title-large-font: var(--md-ref-typeface-brand);
   --md-sys-typescale-title-large-size: 22px;
   --md-sys-typescale-title-large-line-height: 28px;
   --md-sys-typescale-title-large-weight: var(--weight-regular);
-  
+
   --md-sys-typescale-title-medium-font: var(--md-ref-typeface-plain);
   --md-sys-typescale-title-medium-size: 16px;
   --md-sys-typescale-title-medium-line-height: 24px;
   --md-sys-typescale-title-medium-weight: var(--weight-medium);
-  
+
   --md-sys-typescale-title-small-font: var(--md-ref-typeface-plain);
   --md-sys-typescale-title-small-size: 14px;
   --md-sys-typescale-title-small-line-height: 20px;
   --md-sys-typescale-title-small-weight: var(--weight-medium);
-  
+
   /* Body */
   --md-sys-typescale-body-large-font: var(--md-ref-typeface-plain);
   --md-sys-typescale-body-large-size: 16px;
   --md-sys-typescale-body-large-line-height: 24px;
   --md-sys-typescale-body-large-weight: var(--weight-regular);
-  
+
   --md-sys-typescale-body-medium-font: var(--md-ref-typeface-plain);
   --md-sys-typescale-body-medium-size: 14px;
   --md-sys-typescale-body-medium-line-height: 20px;
   --md-sys-typescale-body-medium-weight: var(--weight-regular);
-  
+
   --md-sys-typescale-body-small-font: var(--md-ref-typeface-plain);
   --md-sys-typescale-body-small-size: 12px;
   --md-sys-typescale-body-small-line-height: 16px;
   --md-sys-typescale-body-small-weight: var(--weight-regular);
-  
+
   /* Label */
   --md-sys-typescale-label-large-font: var(--md-ref-typeface-plain);
   --md-sys-typescale-label-large-size: 14px;
   --md-sys-typescale-label-large-line-height: 20px;
   --md-sys-typescale-label-large-weight: var(--weight-medium);
-  
+
   --md-sys-typescale-label-medium-font: var(--md-ref-typeface-plain);
   --md-sys-typescale-label-medium-size: 12px;
   --md-sys-typescale-label-medium-line-height: 16px;
   --md-sys-typescale-label-medium-weight: var(--weight-medium);
-  
+
   --md-sys-typescale-label-small-font: var(--md-ref-typeface-plain);
   --md-sys-typescale-label-small-size: 11px;
   --md-sys-typescale-label-small-line-height: 16px;

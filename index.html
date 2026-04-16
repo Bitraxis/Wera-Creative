@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wera Creative</title>
     <link rel="stylesheet" href="assets/css/normalize.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
     <link rel="stylesheet" href="assets/css/basesheet.css" />
     <link rel="stylesheet" href="assets/css/stylesheet.css" />
     <script type="importmap">
@@ -20,13 +23,24 @@
       import { styles as typescaleStyles } from "@material/web/typography/md-typescale-styles.js";
       document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
     </script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.14.0/brython.min.js">
-    </script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.14.0/brython_stdlib.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/fengari-web@0.1.4/dist/fengari-web.min.js">
-    </script>
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/brython@3.14.0/brython.min.js"
+      defer
+      async
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/brython@3.14.0/brython_stdlib.js"
+      defer
+      async
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/fengari-web@0.1.4/dist/fengari-web.min.js"
+      defer
+      async
+    ></script>
+    <script src="//unpkg.com/alpinejs" defer async></script>
   </head>
   <body onload="brython()">
     <header class="header" id="header">
@@ -45,22 +59,50 @@
           alt="Wera Creative Logo"
           class="firstpage__logo"
         />
-          <!-- Rotating quote: toggles between two texts on hover/click (persists until toggled again) -->
-          <div class="quote" id="hero-quote" tabindex="0" aria-live="polite">
-            <div class="quote__text">To som v živote nerobila, to mi určite pôjde!</div>
-            <div class="quote__author">Neznámy autor</div>
+        <!-- Rotating quote: toggles between two texts on hover/click (persists until toggled again) -->
+        <div class="quote" id="hero-quote" tabindex="0" aria-live="polite">
+          <div class="quote__text">
+            To som v živote nerobila, to mi určite pôjde!
           </div>
+          <div class="quote__author">Neznámy autor</div>
+        </div>
       </section>
       <section class="about" id="about">
         <header class="about__header" id="about__header">
           <h2 class="about__header--h2" id="about__header--h2">O mne</h2>
         </header>
         <h3 class="about__h3">Môj príbeh</h3>
-        <p>Vyštudovala som podvojné účtovníctvo a manažment, mnoho rokov po skončení školy som žila a pracovala v zahraničí a popritom spoznávala rôzne kultúry. Tieto životné cesty ma naučili mnohému ako absolútnej samostatnosti, prispôsobivosti. Žiadny kurz Vás nenaučí niečo podobné. <strong> hovorím nemeckým jazykom a anglickým jazykom.</strong></p>
-        <p>Po rokoch práce v zahraničí som sa usadila v rodnom kraji na Slovensku a založila si rodinu, ktorá je pre mňa prioritou. Naďalej som naberala <strong>dlhoročné odborné skúsenosti asistentky</strong> vrcholového manažmentu, neskôr <strong>špecialistky podpory zákazníkov</strong> v oblastiach služieb, obchodu, IT technológií alebo aj <strong>personálneho manažmentu.</strong></p>
-        <p>Ešte pred niekoľkými mesiacmi bolo ťažké predstaviť si plnohodnotne a efektívne pracovať z domu, na diaľku. Schopnosť adaptovať sa v dnešnej dobe je veľmi kľúčová pokiaľ chcete vyťažiť to najlepšie z každej zmeny. Mňa úplne pohltila myšlienka pomáhať zákazníkom touto formou. Obom stranám takto dokážem ušetriť čas, energiu a aj peniaze. Vďaka <strong>vysokej flexibilite</strong> a <strong>nízkej réžii</strong> je virtuálna asistentka efektívnym personálnym riešením pre podnikateľov rôznych veľkostí.</p>
-        <p>Prepájam moje dlhoročne nadobúdané profesionálne zručnosti v korporátnom svete a súkromnom sektore. Avšak ani po viac ako 12 rokoch profesionálneho rastu sa neprestávam vzdelávať a nadobúdať nové zručnosti a schopnosti, z ktorých profitujú ďalej moji klienti.</p>
-        
+        <p>
+          Vyštudovala som podvojné účtovníctvo a manažment, mnoho rokov po
+          skončení školy som žila a pracovala v zahraničí a popritom spoznávala
+          rôzne kultúry. Tieto životné cesty ma naučili mnohému ako absolútnej
+          samostatnosti, prispôsobivosti. Žiadny kurz Vás nenaučí niečo podobné.
+          <strong> hovorím nemeckým jazykom a anglickým jazykom.</strong>
+        </p>
+        <p>
+          Po rokoch práce v zahraničí som sa usadila v rodnom kraji na Slovensku
+          a založila si rodinu, ktorá je pre mňa prioritou. Naďalej som naberala
+          <strong>dlhoročné odborné skúsenosti asistentky</strong> vrcholového
+          manažmentu, neskôr <strong>špecialistky podpory zákazníkov</strong> v
+          oblastiach služieb, obchodu, IT technológií alebo aj
+          <strong>personálneho manažmentu.</strong>
+        </p>
+        <p>
+          Ešte pred niekoľkými mesiacmi bolo ťažké predstaviť si plnohodnotne a
+          efektívne pracovať z domu, na diaľku. Schopnosť adaptovať sa v dnešnej
+          dobe je veľmi kľúčová pokiaľ chcete vyťažiť to najlepšie z každej
+          zmeny. Mňa úplne pohltila myšlienka pomáhať zákazníkom touto formou.
+          Obom stranám takto dokážem ušetriť čas, energiu a aj peniaze. Vďaka
+          <strong>vysokej flexibilite</strong> a
+          <strong>nízkej réžii</strong> je virtuálna asistentka efektívnym
+          personálnym riešením pre podnikateľov rôznych veľkostí.
+        </p>
+        <p>
+          Prepájam moje dlhoročne nadobúdané profesionálne zručnosti v
+          korporátnom svete a súkromnom sektore. Avšak ani po viac ako 12 rokoch
+          profesionálneho rastu sa neprestávam vzdelávať a nadobúdať nové
+          zručnosti a schopnosti, z ktorých profitujú ďalej moji klienti.
+        </p>
       </section>
       <section class="portfolio" id="portfolio">
         <header class="portfolio__header" id="portfolio__header">
@@ -71,8 +113,13 @@
         <!-- Short description / intro -->
         <p class="portfolio__intro">
           <div class="canva__div">
-            <iframe class="canva__iframe" loading="lazy"
-              src="https://www.canva.com/design/DAGfkTg7y5U/wAX0R3wIAYmskSK3NsoFow/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+            <iframe
+              class="canva__iframe"
+              loading="lazy"
+              src="https://www.canva.com/design/DAGfkTg7y5U/wAX0R3wIAYmskSK3NsoFow/view?embed"
+              allowfullscreen="allowfullscreen"
+              allow="fullscreen"
+            >
             </iframe>
           </div>
         </p>
@@ -82,25 +129,52 @@
           <div class="card">
             <div class="card__content">
               <h4>Profesionálnosť</h4>
-              <p>Definícia tohto slova hovorí o človeku, ktorý dosiahol vysoký stupeň majstrovstva vo svojej tvorbe. A na to potrebujete roky praxe, skúseností a často aj pomyselných faciek. Pokiaľ začínate s podnikaním je rozumným riešením spoľahnúť sa na profesionála vo svojom obore. Je náročné prosperovať v chaose. No byť proaktívna, mať zvládnutý time management a myslieť čo najviac dopredu, to sú kroky, ktoré mi umožnia mať veci pod kontrolou.</p>
+              <p>
+                Definícia tohto slova hovorí o človeku, ktorý dosiahol vysoký
+                stupeň majstrovstva vo svojej tvorbe. A na to potrebujete roky
+                praxe, skúseností a často aj pomyselných faciek. Pokiaľ začínate
+                s podnikaním je rozumným riešením spoľahnúť sa na profesionála
+                vo svojom obore. Je náročné prosperovať v chaose. No byť
+                proaktívna, mať zvládnutý time management a myslieť čo najviac
+                dopredu, to sú kroky, ktoré mi umožnia mať veci pod kontrolou.
+              </p>
             </div>
           </div>
           <div class="card">
             <div class="card__content">
               <h4>Dôvera</h4>
-              <p>Skúsenosti ukazujú, že dôvera sa musí pestovať. Nikoho k nej nemožno nútiť alebo ju urýchľovať. Je to proces dozrievania, ktorý vedie zainteresované strany k hmatateľným prínosom. Nemecký priemyselník a vynálezca Robert Bosch to vedel, keď povedal: „Radšej by som prišiel o peniaze ako o dôveru.“ Ale ako vzniká dôvera? Pozitívna skúsenosť z minulosti je jeden faktor. Ďalším je komunikácia - dôvera musí byť nielen vnímaná, ale tiež aktívne komunikovaná. To si vyžaduje autentickosť, zodpovednosť, empatiu, pokoru a čestnosť.</p>
+              <p>
+                Skúsenosti ukazujú, že dôvera sa musí pestovať. Nikoho k nej
+                nemožno nútiť alebo ju urýchľovať. Je to proces dozrievania,
+                ktorý vedie zainteresované strany k hmatateľným prínosom.
+                Nemecký priemyselník a vynálezca Robert Bosch to vedel, keď
+                povedal: „Radšej by som prišiel o peniaze ako o dôveru.“ Ale ako
+                vzniká dôvera? Pozitívna skúsenosť z minulosti je jeden faktor.
+                Ďalším je komunikácia - dôvera musí byť nielen vnímaná, ale tiež
+                aktívne komunikovaná. To si vyžaduje autentickosť, zodpovednosť,
+                empatiu, pokoru a čestnosť.
+              </p>
             </div>
           </div>
           <div class="card">
             <div class="card__content">
               <h4>Spoľahlivosť</h4>
-              <p>Spoľahlivosť ide ruka v ruke s vybudovanou dôverou. Ako sa dá preukázať spoľahlivosť? Dodržiavaním termínov, plnením úloh, ktoré boli dohodnuté. Pohotovosťou pri hľadaní riešení.</p>
+              <p>
+                Spoľahlivosť ide ruka v ruke s vybudovanou dôverou. Ako sa dá
+                preukázať spoľahlivosť? Dodržiavaním termínov, plnením úloh,
+                ktoré boli dohodnuté. Pohotovosťou pri hľadaní riešení.
+              </p>
             </div>
           </div>
           <div class="card">
             <div class="card__content">
               <h4>Lojalita</h4>
-              <p>Lojálnosť a zodpovednosť sú vlastnosti, ktoré sú skutočnou výhrou pre každý biznis. Takýto človek napríklad koná v súlade s hodnotami a pravidlami firmy a nevzdáva sa ani pri prvých náznakoch problémov.</p>
+              <p>
+                Lojálnosť a zodpovednosť sú vlastnosti, ktoré sú skutočnou
+                výhrou pre každý biznis. Takýto človek napríklad koná v súlade s
+                hodnotami a pravidlami firmy a nevzdáva sa ani pri prvých
+                náznakoch problémov.
+              </p>
             </div>
           </div>
         </div>
@@ -112,13 +186,29 @@
           </h2>
         </header>
         <p>
-          Ponúkam rôzne balíky služieb, ktoré sú prispôsobené potrebám malých a stredných podnikov, ako aj jednotlivcov. Či už potrebujete jednorázovú pomoc alebo pravidelnú podporu, mám pre vás riešenie.
+          Ponúkam rôzne balíky služieb, ktoré sú prispôsobené potrebám malých a
+          stredných podnikov, ako aj jednotlivcov. Či už potrebujete jednorázovú
+          pomoc alebo pravidelnú podporu, mám pre vás riešenie.
         </p>
 
         <!-- simple filter controls above cards: act as a language switch -->
         <div class="filters" role="tablist" aria-label="Jazyk">
-          <button class="filter active" data-lang="sk" aria-pressed="true" type="button">Slovenčina</button>
-          <button class="filter" data-lang="de" aria-pressed="false" type="button">Nemčina</button>
+          <button
+            class="filter active"
+            data-lang="sk"
+            aria-pressed="true"
+            type="button"
+          >
+            Slovenčina
+          </button>
+          <button
+            class="filter"
+            data-lang="de"
+            aria-pressed="false"
+            type="button"
+          >
+            Nemčina
+          </button>
         </div>
 
         <div class="cards-grid">
@@ -141,36 +231,78 @@
               <h4>Mini balík</h4>
               <p>10 hodín práce rozložených v mesiaci</p>
               <p></p>
-              <button class="card__contact-btn" type="button" aria-label="Kontaktovať" id="mini-sk">Záujem</button>
+              <button
+                class="card__contact-btn"
+                type="button"
+                aria-label="Kontaktovať"
+                id="mini-sk"
+              >
+                Záujem
+              </button>
             </div>
             <div class="card__content card__de" hidden>
               <h4>Mini balík</h4>
               <p>10 hodín práce rozložených v mesiaci</p>
-              <button class="card__contact-btn" type="button" aria-label="Kontaktieren" id="mini-de">Záujem</button>
+              <button
+                class="card__contact-btn"
+                type="button"
+                aria-label="Kontaktieren"
+                id="mini-de"
+              >
+                Záujem
+              </button>
             </div>
           </div>
           <div class="card">
             <div class="card__content card__sk">
               <h4>Maxi balík</h4>
               <p>20 hodín práce rozložených v mesiaci</p>
-              <button class="card__contact-btn" type="button" aria-label="Kontaktovať" id="maxi-sk">Záujem</button>
+              <button
+                class="card__contact-btn"
+                type="button"
+                aria-label="Kontaktovať"
+                id="maxi-sk"
+              >
+                Záujem
+              </button>
             </div>
             <div class="card__content card__de" hidden>
               <h4>Maxi balík</h4>
               <p>20 hodín práce rozložených v mesiaci</p>
-              <button class="card__contact-btn" type="button" aria-label="Kontaktieren" id="maxi-de">Záujem</button>
+              <button
+                class="card__contact-btn"
+                type="button"
+                aria-label="Kontaktieren"
+                id="maxi-de"
+              >
+                Záujem
+              </button>
             </div>
           </div>
           <div class="card">
             <div class="card__content card__sk">
               <h4>Maxi PLUS balík</h4>
               <p>30 hodín práce rozložených v mesiaci</p>
-              <button class="card__contact-btn" type="button" aria-label="Kontaktovať" id="maxi-plus-sk">Záujem</button>
+              <button
+                class="card__contact-btn"
+                type="button"
+                aria-label="Kontaktovať"
+                id="maxi-plus-sk"
+              >
+                Záujem
+              </button>
             </div>
             <div class="card__content card__de" hidden>
               <h4>Maxi PLUS balík</h4>
               <p>30 hodín práce rozložených v mesiaci</p>
-              <button class="card__contact-btn" type="button" aria-label="Kontaktieren" id="maxi-plus-de">Záujem</button>
+              <button
+                class="card__contact-btn"
+                type="button"
+                aria-label="Kontaktieren"
+                id="maxi-plus-de"
+              >
+                Záujem
+              </button>
             </div>
           </div>
         </div>
@@ -184,7 +316,11 @@
           <div class="card">
             <div class="card__content">
               <h4>Email</h4>
-              <p><a href="mailto:asistentwera@gmail.com">asistentwera@gmail.com</a></p>
+              <p>
+                <a href="mailto:asistentwera@gmail.com"
+                  >asistentwera@gmail.com</a
+                >
+              </p>
             </div>
           </div>
 
@@ -203,7 +339,11 @@
           </div>
         </div>
         <!-- Contact form (simple layout) -->
-        <form class="contact__form" action="https://formsubmit.co/asistentwera@gmail.com" method="POST">
+        <form
+          class="contact__form"
+          action="https://formsubmit.co/asistentwera@gmail.com"
+          method="POST"
+        >
           <div class="form-row">
             <label for="name">Meno</label>
             <input id="name" name="name" type="text" />
@@ -219,7 +359,7 @@
           <div class="form-row">
             <div class="serviceDiv">
               <label for="service">Služba</label>
-              <br>
+              <br />
               <select id="service" name="service">
                 <option value="dohoda" selected>Chcem sa dohodnúť</option>
                 <option value="mini-sk">Mini balík (SK)</option>
@@ -228,7 +368,7 @@
                 <option value="mini-de">Mini balík (DE)</option>
                 <option value="maxi-de">Maxi balík (DE)</option>
                 <option value="maxi-plus-de">Maxi PLUS balík (DE)</option>
-              </select>                 
+              </select>
             </div>
           </div>
           <div class="form-row">
@@ -238,15 +378,13 @@
           <div class="form-row">
             <input type="submit" class="btn" value="Odoslať" />
           </div>
-          
         </form>
-        
       </section>
     </main>
     <footer class="footer" id="footer">
       <p class="footer__p" id="footer__p">
         © 2026 Wera Creative. Všetky práva vyhradené.
-      </p>  
+      </p>
     </footer>
     <!-- Brython: handles all interactions (scroll, quote toggle, language switch) -->
     <script type="text/python" src="assets/py/script.py"></script>
