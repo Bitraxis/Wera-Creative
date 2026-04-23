@@ -1,30 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="sk">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Wera Creative je webová vizitka virtuálnej asistentky s portfóliom, službami a kontaktom."
+    >
     <title>Wera Creative</title>
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/basesheet.css">
     <link rel="stylesheet" href="assets/css/stylesheet.css">
-    <script
-      src="https://cdn.jsdelivr.net/npm/brython@3.14.0/brython.min.js"
-      defer
-      async
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/brython@3.14.0/brython_stdlib.js"
-      defer
-      async
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/fengari-web@0.1.4/dist/fengari-web.min.js"
-      defer
-      async
-    ></script>
-    <script src="//unpkg.com/alpinejs" defer async></script>
+    
   </head>
-  <body onload="brython()">
+  <body>
     <header class="header" id="header">
       <h1 class="header__h1">WERA CREATIVE</h1>
       <input id="nav-toggle" type="checkbox" class="nav-toggle">
@@ -94,9 +83,10 @@
           </h2>
         </header>
         <!-- Short description / intro -->
-        <div class="canva__div portfolio_intro" >
+        <div class="canva__div portfolio_intro">
           <iframe
             class="canva__iframe"
+            title="Portfólio Wera Creative na Canve"
             loading="lazy"
             src="https://www.canva.com/design/DAGfkTg7y5U/wAX0R3wIAYmskSK3NsoFow/view?embed"
             allowfullscreen="allowfullscreen"
@@ -172,118 +162,30 @@
           pomoc alebo pravidelnú podporu, mám pre vás riešenie.
         </p>
 
-        <!-- simple filter controls above cards: act as a language switch -->
-        <div class="filters" role="tablist" aria-label="Jazyk">
-          <button
-            class="filter active"
-            data-lang="sk"
-            aria-pressed="true"
-            type="button"
-          >
-            Slovenčina
-          </button>
-          <button
-            class="filter"
-            data-lang="de"
-            aria-pressed="false"
-            type="button"
-          >
-            Nemčina
-          </button>
-        </div>
-
         <div class="cards-grid">
           <div class="card">
             <div class="card__content card__sk">
               <h3>Hodinová sadzba</h3>
               <p>Jednorázový výkon</p>
               <p>Občasná spolupráca</p>
-              <p>~ 16€ / hodina</p>
-            </div>
-            <div class="card__content card__de" hidden>
-              <h3>Hodinová sadzba</h3>
-              <p>Jednorázový výkon</p>
-              <p>Občasná spolupráca</p>
-              <p>~ 20€ / hodina</p>
             </div>
           </div>
           <div class="card">
             <div class="card__content card__sk">
               <h3>Mini balík</h3>
               <p>10 hodín práce rozložených v mesiaci</p>
-              <p></p>
-              <button
-                class="card__contact-btn"
-                type="button"
-                aria-label="Kontaktovať"
-                id="mini-sk"
-              >
-                Záujem
-              </button>
-            </div>
-            <div class="card__content card__de" hidden>
-              <h3>Mini balík</h3>
-              <p>10 hodín práce rozložených v mesiaci</p>
-              <button
-                class="card__contact-btn"
-                type="button"
-                aria-label="Kontaktieren"
-                id="mini-de"
-              >
-                Záujem
-              </button>
             </div>
           </div>
           <div class="card">
             <div class="card__content card__sk">
               <h3>Maxi balík</h3>
               <p>20 hodín práce rozložených v mesiaci</p>
-              <button
-                class="card__contact-btn"
-                type="button"
-                aria-label="Kontaktovať"
-                id="maxi-sk"
-              >
-                Záujem
-              </button>
-            </div>
-            <div class="card__content card__de" hidden>
-              <h3>Maxi balík</h3>
-              <p>20 hodín práce rozložených v mesiaci</p>
-              <button
-                class="card__contact-btn"
-                type="button"
-                aria-label="Kontaktieren"
-                id="maxi-de"
-              >
-                Záujem
-              </button>
             </div>
           </div>
           <div class="card">
             <div class="card__content card__sk">
               <h3>Maxi PLUS balík</h3>
               <p>30 hodín práce rozložených v mesiaci</p>
-              <button
-                class="card__contact-btn"
-                type="button"
-                aria-label="Kontaktovať"
-                id="maxi-plus-sk"
-              >
-                Záujem
-              </button>
-            </div>
-            <div class="card__content card__de" hidden>
-              <h3>Maxi PLUS balík</h3>
-              <p>30 hodín práce rozložených v mesiaci</p>
-              <button
-                class="card__contact-btn"
-                type="button"
-                aria-label="Kontaktieren"
-                id="maxi-plus-de"
-              >
-                Záujem
-              </button>
             </div>
           </div>
         </div>
@@ -308,7 +210,9 @@
           <div class="card">
             <div class="card__content">
               <h3>Telefón</h3>
-              <p><a href="tel:+421908706071">+421 908 706 071</a></p>
+              <p>
+                <a href="tel:+421908706071">+421&nbsp;908&nbsp;706&nbsp;071</a>
+              </p>
             </div>
           </div>
 
@@ -357,7 +261,7 @@
             <textarea id="message" name="message" rows="5"></textarea>
           </div>
           <div class="form-row">
-            <input type="submit" class="btn" value="Odoslať">
+            <button type="submit" class="btn">Odoslať</button>
           </div>
         </form>
       </section>
@@ -368,6 +272,19 @@
       </p>
     </footer>
     <!-- Brython: handles all interactions (scroll, quote toggle, language switch) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/brython@3.14.0/brython.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/brython@3.14.0/brython_stdlib.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/fengari-web@0.1.4/dist/fengari-web.min.js"
+      defer
+    ></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
     <script type="text/python" src="assets/py/script.py"></script>
     <script src="assets/js/script.js"></script>
   </body>
