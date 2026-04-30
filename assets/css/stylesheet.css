@@ -11,6 +11,12 @@
   --muted: rgba(15, 15, 16, 0.08);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --muted: rgba(254, 254, 255, 0.80);
+  }  
+}
+
 * {
   scrollbar-width: none; /* for Firefox */
   -ms-overflow-style: none; /* for Internet Explorer and Edge */
@@ -311,6 +317,13 @@ label {
   padding: 1.15rem;
 }
 .card__content h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--gc2);
+  letter-spacing: 0.2px;
+}
+.card__content h4 {
   margin: 0 0 0.4rem 0;
   font-size: 1.12rem;
   font-weight: 700;
